@@ -1,0 +1,42 @@
+.tabs-container {
+    width: 100%; 
+    height: 50px;
+    background: #f5b335; 
+    z-index: 1;
+    transition: top 0.2s ease-in-out;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid black;
+}
+
+.tabs-container.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    animation: tabsDown 0.5s;
+}
+
+.tabs-sub-container {
+    max-width: 1200px;
+    width: 100%;
+    transition: height 0.3s ease-out
+}
+
+.tabs-menu-item {
+    width: 80px;
+    cursor: pointer;
+    text-align: center;
+    display: inline;
+    line-height: 50px;
+    margin: 0 20px;
+}
+
+
+@keyframes tabsDown {
+    from {
+        height: 0;
+    } to {
+        height: 50px;
+    }
+}

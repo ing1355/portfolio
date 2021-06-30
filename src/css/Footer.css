@@ -1,0 +1,38 @@
+.footer-container {
+    height: 250px;
+    background: rgb(27,36,47);
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-link-container {
+    height: 150px;
+    line-height: 250px;
+    text-align: center;
+}
+
+.footer-link-item {
+    margin: 0 16px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+    padding: 16px;
+}
+
+.footer-top-btn {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+
+.footer-author {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: rgb(38,47,56);
+    font-weight: bold;
+    font-size: 1.5rem;
+}

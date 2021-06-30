@@ -1,0 +1,82 @@
+.about-characteristics-container {
+    text-align: center;
+}
+
+.about-characteristics-item {
+    height: 230px;
+}
+
+.about-characteristics-item-img {
+    height: 100px;
+    object-fit: cover;
+}
+
+.about-characteristics-item-text {
+
+}
+
+.about-characteristics-item-subtext {
+    
+}
+
+.about-profile-container {
+    height: 430px;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about-profile-img {
+    object-fit: cover;
+    height: 250px;
+}
+
+.ability {
+    max-width: 90%;
+    position: relative;
+    height: 28px;
+    display: block;
+    align-items: flex-end;
+    background: #eee;
+    margin-bottom: 15px;
+}
+
+.ability-bar {
+    height: 100%;
+    opacity: 1;
+    padding: 0;
+    transition: 1.1s 0.2s width ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+}
+
+.ability-name {
+    width: 110px;
+    font-size: 11pt;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: blue;
+    background: green;
+    height: 100%;
+}
+
+.ability-percentage {
+    display: initial;
+    font-size: 11pt;
+}
+
+.ability-tag {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 8px ;
+    margin: 4px 8px 4px 0;
+}
+
+.about-ability-container {
+    display: block;
+    text-align: start;
+    justify-content: flex-start;
+}
