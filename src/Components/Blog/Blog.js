@@ -49,8 +49,9 @@ const Blog = props => {
         });
 
         api.posts
-            .browse({ limit: 5, fields: ['title', 'feature_image', 'url'], filter: 'featured:true' })
+            .browse({ limit: 5, filter: 'featured:true', include: 'tags,authors' })
             .then((posts) => {
+                console.log(posts);
                 setBlogDatas(posts);
             })
             .catch((err) => {
@@ -74,9 +75,9 @@ const Blog = props => {
                 <Row className="blog-row-container" gutter={rowGutter}>
                     {
                         blogDatas.map((data, ind) => {
-                            const { title, feature_image, url } = data;
+                            const { title, feature_image, url, tags, authors } = data;
                             return (
-                                <CardContainer span={8} title={title} imageSrc={feature_image} url={url} id={"blog-waypoint-" + ind} delay={`.${ind}s`} key={'blog-card-' + ind}>
+                                <CardContainer span={6} title={title} imageSrc={feature_image} url={url} id={"blog-waypoint-" + ind} delay={`.${ind}s`} key={'blog-card-' + ind} tags={tags} profileImage={authors[0].profile_image}>
 
                                 </CardContainer>
                             )
