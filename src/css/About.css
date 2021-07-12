@@ -12,7 +12,9 @@
 }
 
 .about-characteristics-item-text {
-
+    margin: 15px 0 5px 0;
+    font-size: 18pt;
+    font-weight: 500;
 }
 
 .about-characteristics-item-subtext {
@@ -20,7 +22,7 @@
 }
 
 .about-profile-container {
-    height: 430px;
+    height: 330px;
     width: 100%;
     margin-top: 50px;
     text-align: center;
@@ -28,7 +30,13 @@
 
 .about-profile-img {
     object-fit: cover;
-    height: 250px;
+    max-height: 150px;
+}
+
+.about-profile-text {
+    margin: 20px 0 15px 0;
+    font-size: 18pt;
+    font-weight: 500;
 }
 
 .ability {
@@ -39,17 +47,20 @@
     align-items: flex-end;
     background: #eee;
     margin-bottom: 15px;
+    text-align: end;
 }
 
 .ability-bar {
     height: 100%;
-    opacity: 1;
+    width: 0%;
     padding: 0;
     transition: 1.1s 0.2s width ease-in-out;
+    -webkit-transition: 1.1s 0.2s width ease-in-out;
     position: absolute;
     left: 0;
     top: 0;
-    background: red;
+    background: #C26B00;
+    margin: 0 0 15px 0;
 }
 
 .ability-name {
@@ -58,20 +69,25 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: blue;
-    background: green;
+    color: white;
+    background: #FF8D00;
     height: 100%;
 }
 
 .ability-percentage {
     display: initial;
     font-size: 11pt;
+    z-index: 1;
+    padding: 0 10px 0 0;
+    line-height: 28px;
 }
 
 .ability-tag {
     display: inline-block;
-    border: 1px solid black;
-    padding: 8px ;
+    border: 1px solid #FF8D00;
+    font-size: 15px;
+    color: #FF8D00;
+    padding: 2px 8px;
     margin: 4px 8px 4px 0;
 }
 
@@ -79,4 +95,45 @@
     display: block;
     text-align: start;
     justify-content: flex-start;
+}
+
+@media (max-width: 992px) {
+    .ability {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .about-ability-container {
+        margin: 0 auto !important;
+        max-width: 80% !important;
+    }
+    .about-profile-container {
+        height: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-profile-container {
+        height: 100%;
+    }
+
+    .about-ability-container {
+        margin: 0 auto;
+        max-width: 60% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-ability-container {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .ability {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .ability-percentage {
+        display: none;
+    }
 }

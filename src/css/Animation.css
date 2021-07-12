@@ -1,0 +1,142 @@
+.animated.slide-in-left {
+    animation: slideInLeft 0.75s ease both;
+}
+
+.animated.slide-in-right {
+    animation: slideInRight 0.75s ease both;
+}
+
+.animated.slide-in-bottom {
+    animation: bounce 0.75s ease both;
+}
+
+.animated.fadeIn {
+    animation: fadeIn 0.75s ease both;
+}
+
+.animated.flipInX {
+    animation: flipInX 0.75s ease both;
+}
+
+.animated.popIn {
+    animation: popIn 1s both;
+}
+
+.animated.popDown {
+    animation: popDown 0.5s;
+}
+
+.animated.bounce {
+    animation: bounce 0.5s;
+}
+
+.delay1 {
+    animation-delay: 0.2s;
+}
+
+.delay2 {
+    animation-delay: 0.4s;
+}
+
+.delay3 {
+    animation-delay: 0.6s;
+}
+
+.trigger {
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: perspective(400px) rotateY(90deg);
+    }
+    40% {
+        animation-timing-function: ease-in;
+        transform: perspective(400px) rotateY(-20deg);
+    }
+    60% {
+        opacity: 1;
+        transform: perspective(400px) rotateY(10deg);
+    }
+    80% {
+        transform: perspective(400px) rotateY(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(400px);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popDown {
+    0% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scaleX(0) scaleY(0) translateY(900px);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1) translateY(0);
+    }
+  }

@@ -1,21 +1,22 @@
 import React from 'react';
 import '../../css/Footer.css'
+import {FacebookOutlined, InstagramOutlined, CodepenOutlined, LinkedinOutlined, ArrowUpOutlined} from '@ant-design/icons'
 
 const Footer = props => {
     return (
         <div className="footer-container">
             <div className="footer-link-container">
                 <a className="footer-link-item">
-                    test
+                    <LinkedinOutlined className="footer-link-icon"/>
                 </a>
                 <a className="footer-link-item">
-                    test
+                    <FacebookOutlined className="footer-link-icon"/>
                 </a>
                 <a className="footer-link-item">
-                    test
+                    <InstagramOutlined className="footer-link-icon"/>
                 </a>
                 <a className="footer-link-item">
-                    test
+                    <CodepenOutlined className="footer-link-icon"/>
                 </a>
             </div>
             <button className="footer-top-btn" onClick={() => {
@@ -24,7 +25,7 @@ const Footer = props => {
                     behavior: 'smooth'
                 });
             }}>
-                Up
+                <ArrowUpOutlined style={{fontSize:'2.5rem'}}/>
             </button>
             <div className="footer-author">
                 MATTHEW WILLIAMS

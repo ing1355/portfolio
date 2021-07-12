@@ -1,4 +1,47 @@
 #home {
-    height: 100vh;
-    background: #252934;
+    height: calc(100vh + 53px);
+    background-color: #252934;
+    background-image: url('../assets/homeGif.gif');
+    overflow: hidden;
+}
+
+.home-text {
+    font-size: 32pt;
+    text-align: center;
+    line-height: 48px;
+    margin: 0 0 20px 0;
+    z-index: 1;
+    color: white;
+    pointer-events: none;
+}
+
+.home-text-span {
+    color: #FF8D00;
+    pointer-events: none;
+}
+
+.home-btn {
+    position: relative;
+    font-size: 16pt;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    height: 52px;
+    padding: 0 50px 0 16px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.home-btn:hover {
+    background: #FF8D00;
+    border: 2px solid transparent;
+}
+
+.home-btn-icon {
+    transition: transform 0.3s;
+    right: 15px;
+    position: absolute;
+    top: 16px;
+    color: white;
 }

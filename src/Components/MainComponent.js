@@ -12,9 +12,6 @@ const MainComponent = props => {
             <About/>
             <Works/>
             <Blog/>
-            <div className="btn-load-more">
-                Load more
-            </div>
             <Contact/>
             <Footer/>
         </>

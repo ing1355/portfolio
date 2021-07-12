@@ -13,10 +13,20 @@
 
 .footer-link-item {
     margin: 0 16px;
-    width: 80px;
-    height: 80px;
-    border: 1px solid white;
-    padding: 16px;
+    width: 55px;
+    height: 55px;
+    background: #262f38;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-link-icon {
+    font-size: 1.6rem;
+    display: inline-block;
+    vertical-align: middle;
+    color: white !important;
 }
 
 .footer-top-btn {
@@ -26,13 +36,17 @@
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
+    border: none;
+    background: #FF8D00;
+    color: white;
+    cursor: pointer;
 }
 
 .footer-author {
     height: 100px;
     line-height: 100px;
     text-align: center;
-    color: rgb(38,47,56);
+    color: rgba(255,255,255,.2);
     font-weight: bold;
     font-size: 1.5rem;
 }
