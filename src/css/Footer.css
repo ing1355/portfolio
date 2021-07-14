@@ -7,7 +7,8 @@
 
 .footer-link-container {
     height: 150px;
-    line-height: 250px;
+    flex-direction: row;
+    align-items: flex-end;
     text-align: center;
 }
 

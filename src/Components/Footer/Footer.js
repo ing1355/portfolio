@@ -5,7 +5,7 @@ import {FacebookOutlined, InstagramOutlined, CodepenOutlined, LinkedinOutlined, 
 const Footer = props => {
     return (
         <div className="footer-container">
-            <div className="footer-link-container">
+            <div className="footer-link-container flex">
                 <a className="footer-link-item">
                     <LinkedinOutlined className="footer-link-icon"/>
                 </a>

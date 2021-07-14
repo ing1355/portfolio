@@ -7,6 +7,15 @@
     border-radius: 15px !important;
     color: #FF8D00 !important;
     overflow: hidden;
+    transition: all 0.5s;
+}
+
+.blog-card.unhover {
+    opacity: 0.5;
+}
+
+.blog-card:hover {
+    transform: translateY(-20px);
 }
 
 .blog-card > .ant-card-body {
@@ -61,6 +70,7 @@
     left: 0;
     background-color: transparent;
     word-break: break-word;
+    padding-bottom: 8px;
 }
 
 .blog-card-body-contents {
@@ -106,11 +116,11 @@
 .blog-card-footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 6px;
+    justify-content: flex-end;
+    /* margin-bottom: 6px; */
     margin-top: 16px;
-    border-top: 1px solid rgba(255,255,255,.3);
-    padding: 8px 16px 0;
+    /* border-top: 1px solid rgba(255,255,255,.3); */
+    padding: 8px 16px 8px;
 }
 
 .blog-card-footer-readmore {

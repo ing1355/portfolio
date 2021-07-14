@@ -110,6 +110,9 @@
     .about-profile-container {
         height: 100%;
     }
+    .ability-tag {
+        font-size: 11pt;
+    }
 }
 
 @media (min-width: 992px) {
@@ -135,5 +138,26 @@
     }
     .ability-percentage {
         display: none;
+    }
+}
+
+@media (max-width:576px) {
+    .ability-name {
+        width: 90px;
+        font-size: 9pt;
+    }
+    .ability-tag {
+        font-size: 9pt;
+    }
+}
+
+@media (max-width:320px) {
+    .ability-name {
+        width: 70px;
+        font-size: 7pt;
+    }
+    
+    .ability-tag {
+        font-size: 6pt;
     }
 }

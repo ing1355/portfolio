@@ -1,8 +1,18 @@
 #home {
     height: calc(100vh + 53px);
     background-color: #252934;
-    background-image: url('../assets/homeGif.gif');
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../assets/homeGif.gif'); */
     overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.homegif {
+    position: absolute;
+    z-index: 2;
 }
 
 .home-text {

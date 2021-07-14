@@ -1,11 +1,19 @@
 import { ArrowRightOutlined } from '@ant-design/icons';
 import React, { useEffect } from 'react';
 import '../../css/Home.css'
+import '../../scss/bubble.scss'
 import $ from 'jquery';
+import gif from '../../assets/homeGif.gif';
 
 const Home = props => {
     return (
         <section id='home' className="flex">
+            <div className="bubbles">
+                {
+                    new Array(50).fill(1).map(() => <div className="bubble"/>)
+                }
+            </div>
+            {/* <img src={gif} className="homegif" /> */}
             {/* <div id="stars"/>
             <div id="stars2"/>
             <div id="stars3"/>
