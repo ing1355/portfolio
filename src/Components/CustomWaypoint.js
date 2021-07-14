@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Waypoint } from 'react-waypoint';
 import $ from 'jquery';
 
@@ -27,7 +27,7 @@ const CustomWaypoint = ({ elemId, children }) => {
 
     return (
         <>
-            <Waypoint bottomOffset="350px" onEnter={({ previousPosition, currentPosition, event, waypointTop }) => {
+            <Waypoint bottomOffset="300px" onEnter={({ previousPosition, currentPosition, event, waypointTop }) => {
                 animationActivate();
             }}>
                 {children}

@@ -1,5 +1,5 @@
 .tabs-container {
-    width: 100%; 
+    width: 100%;
     height: 50px;
     z-index: 99;
     background-color: #000000;
@@ -22,6 +22,12 @@
     max-width: 1200px;
     width: 100%;
     transition: height 0.3s ease-out
+}
+
+@media (max-width: 1200px) {
+    .tabs-sub-container {
+        text-align: center;
+    }
 }
 
 .tabs-menu-item {
@@ -54,7 +60,9 @@
 @keyframes tabsDown {
     from {
         height: 0;
-    } to {
+    }
+
+    to {
         height: 50px;
     }
 }
@@ -74,6 +82,7 @@
     .mobile-menu-icon {
         display: flex;
     }
+
     .tabs-sub-container {
         height: 0px;
         top: 50px;
@@ -81,9 +90,11 @@
         overflow: hidden;
         background: #333;
     }
+
     .tabs-sub-container.opened {
         height: 220px;
     }
+
     .tabs-container {
         left: 0;
         top: 0;
@@ -91,9 +102,11 @@
         bottom: initial;
         z-index: 99;
     }
+
     .tabs-menu-item:first-child {
         padding: 25px 20px 6px 20px;
     }
+
     .tabs-menu-item {
         width: 100%;
         display: block;

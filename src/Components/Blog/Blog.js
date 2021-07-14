@@ -22,17 +22,15 @@ const Blog = props => {
             var elem = $('#blog-waypoint-' + ind),
                 animationClass = elem.attr('trigger'),
                 animationDelay = elem.attr('trigger-delay');
-            if (isElementInViewport(elem[0])) {
-                if (animationDelay) {
-                    elem.css({
-                        '-webkit-animation-delay': animationDelay,
-                        '-moz-animation-delay': animationDelay,
-                        'animation-delay': animationDelay
-                    });
-                }
-                elem.addClass('trigger').addClass('animated');
-                elem.addClass('trigger').addClass(animationClass);
+            if (animationDelay) {
+                elem.css({
+                    '-webkit-animation-delay': animationDelay,
+                    '-moz-animation-delay': animationDelay,
+                    'animation-delay': animationDelay
+                });
             }
+            elem.addClass('trigger').addClass('animated');
+            elem.addClass('trigger').addClass(animationClass);
         })
     }
 
@@ -64,7 +62,9 @@ const Blog = props => {
 
     useEffect(() => {
         if (blogDatas.length) {
-            animationActivate(true);
+            if (isElementInViewport($('#blog-waypoint-0')[0])) {
+                animationActivate(true);
+            }
         }
     }, [blogDatas])
 
@@ -73,6 +73,7 @@ const Blog = props => {
             <div className="blog container flex">
                 <TitleComponent title="blog" />
                 <Waypoint bottomOffset="300px" onEnter={e => {
+                    console.log(e);
                     animationActivate();
                 }} />
                 <Row className="blog-row-container" gutter={rowGutter}>
@@ -97,9 +98,9 @@ const Blog = props => {
                     key: '134babcda16ad465f5f7ae624b',
                     version: "v3"
                 });
-        
+
                 api.posts
-                    .browse({ filter:'featured:true', include: 'tags,authors' })
+                    .browse({ filter: 'featured:true', include: 'tags,authors' })
                     .then((posts) => {
                         setLoading(false);
                         setLoadedMore(true);
@@ -110,7 +111,7 @@ const Blog = props => {
                     });
             }}>
                 Load more
-                {loading && <Spin indicator={antIcon} style={{marginLeft:'16px'}}/>}
+                {loading && <Spin indicator={antIcon} style={{ marginLeft: '16px' }} />}
             </div>}
         </section>
     )
