@@ -6,14 +6,9 @@ import Home from './Components/Home/Home';
 import 'antd/dist/antd.css';
 import { useEffect } from 'react';
 import $ from 'jquery';
-import SmallTabsComponent from './Components/Tab/SmallTabComponent';
 import styles from './sass/test.sass'
 
 function App() {
-  var size = {
-    width: window.innerWidth || document.body.clientWidth,
-    height: window.innerHeight || document.body.clientHeight 
-  }
   function highlightLink(anchor) {
     document.getElementsByClassName('')
     $('nav .active').removeClass('active');
@@ -50,9 +45,7 @@ function App() {
   return (
     <>
       <Home />
-      {
-        size.width > 600 ? <TabsComponent /> : <SmallTabsComponent/>
-      }
+      <TabsComponent />
       <MainComponent />
     </>
   );
