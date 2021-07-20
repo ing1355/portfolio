@@ -1,0 +1,34 @@
+@font-face {
+    font-family: KoPub Batang;
+    font-style: normal;
+    font-weight: 100;
+    src: url('../assets//fonts/KoPubBatangLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: KoPub Batang;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets//fonts/KoPubBatangMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: KoPub Batang;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../assets//fonts/KoPubBatangBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: KoPub Dotum;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets//fonts/KoPubDotumMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: KoPub Dotum;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../assets//fonts/KoPubDotumBold.ttf') format('truetype');
+}

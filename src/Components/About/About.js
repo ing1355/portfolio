@@ -1,35 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../../css/About.css';
 import { Row, Col } from 'antd';
 import TitleComponent from '../TitleComponent';
 import CustomWaypoint from '../CustomWaypoint';
 import { items } from './AboutItems';
+import profileImg from '../../assets/profile.jpg'
 
 const About = props => {
     const abilities = {
         Python: '90%',
         PyTorch: '80%',
         Tensorflow: '70%',
-        'C & C++': '50%'
+        'C & C++': '50%',
+        Photoshop: '80%'
     }
 
     const tags = [
-        'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Machine Transition',
-        'Image Transition', 'Sign Language Processing', 'Human Pose Estimation', 'Optical Character Recognition', 'Document Recognition'
+        'Natural Language Processing', 'Computer Vision', 'Machine Transition', 'OCR', 'Document Recognition',
+        'Synthesis Data Generation', 'Sign Language Translation', 'Human Pose Estimation'
     ]
 
     const profile = {
-        profile_imgSrc : 'https://cdn.pixabay.com/photo/2017/05/13/23/05/emoji-2310895_960_720.png',
-        profile_title : "Who's this guy?",
-        profile_description :  <>I'm a Front-End Developer for <span style={{ color: '#FF8D00' }}>ChowNow</span> in Los Angeles, CA.<br />
-        I have serious passion for UI effects, animations and creating<br />intuitive, dynamic user experiences.<br />
-        <span style={{ color: '#FF8D00' }}>Let's make something special.</span></>
+        profile_imgSrc : profileImg,
+        profile_title : "Sungwon Moon",
+        profile_description :  <>Deep Learning Researcher for <a style={{color:'#d4352c'}} href="https://www.lomin.ai/">Lomin</a>.<br/>
+        I am very interested in solving the world’s problems<br/>
+        with HIGH-LEVEL technology, such as DL!</>
     }
 
     return (
         <section id="about">
             <div className="about container flex">
-                <TitleComponent title="about" />
+                {/* <TitleComponent title="about" />
                 <Row className="about-characteristics-container">
                     {
                         items.map((item,ind) => {
@@ -54,9 +56,22 @@ const About = props => {
                             )
                         })
                     }
-                </Row>
-                <Row className="about-profile-container" gutter={[32, 64]}>
+                </Row> */}
+                <Row className="about-profile-container" justify="center">
                     <CustomWaypoint elemId="about-waypoint-9">
+                        <Col xs={24} sm={24} md={24} lg={12} className="trigger" trigger="slide-in-left" id="about-waypoint-9">
+                            <img className="about-profile-img" src={profile.profile_imgSrc} />
+                            <div className="about-profile-text kopubbatang">
+                                {profile.profile_title}
+                            </div>
+                            <div>
+                                {profile.profile_description}
+                            </div>
+                        </Col>
+                    </CustomWaypoint>
+                </Row>
+                <Row className="about-profile-container" gutter={[0, 64]} justify="center">
+                    {/* <CustomWaypoint elemId="about-waypoint-9">
                         <Col xs={24} sm={24} md={24} lg={12} className="trigger" trigger="slide-in-left" id="about-waypoint-9">
                             <img className="about-profile-img" src={profile.profile_imgSrc} />
                             <div className="about-profile-text">
@@ -66,7 +81,7 @@ const About = props => {
                                 {profile.profile_description}
                             </div>
                         </Col>
-                    </CustomWaypoint>
+                    </CustomWaypoint> */}
                     <CustomWaypoint elemId='about-waypoint-10'>
                         <Col xs={24} sm={24} md={24} lg={12} className="about-ability-container trigger" trigger="slide-in-right" id="about-waypoint-10">
                             {Object.keys(abilities).map((ab, ind) => {

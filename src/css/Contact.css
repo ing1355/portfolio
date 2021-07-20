@@ -58,7 +58,23 @@
     margin: 5px 0 0;
     padding: 10px 30px;
     border: 2px solid #fff;
-    background: black;
+    background: transparent;
+    transition: all 0.5s ease-out;
     color: white;
     cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #FF8D00;
+    border-color: #FF8D00;
+}
+
+.custom-input {
+    background: #1e242c !important;
+    border: none !important;
+    font-size: 14pt !important;
+}
+
+.custom-input::placeholder {
+    color: #616161 !important;
 }

@@ -30,17 +30,20 @@
 
 .about-profile-img {
     object-fit: cover;
-    max-height: 150px;
+    max-height: 250px;
+    border-radius: 125px;
 }
 
 .about-profile-text {
     margin: 20px 0 15px 0;
-    font-size: 18pt;
-    font-weight: 500;
+    font-size: 22pt;
+    font-family: KoPub Dotum;
+    font-weight: bold;
+    letter-spacing: -2px;
 }
 
 .ability {
-    max-width: 90%;
+    /* max-width: 90%; */
     position: relative;
     height: 28px;
     display: block;
@@ -59,7 +62,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: #C26B00;
+    background: #A02921;
     margin: 0 0 15px 0;
 }
 
@@ -70,7 +73,7 @@
     left: 0;
     top: 0;
     color: white;
-    background: #FF8D00;
+    background: #d4352c;
     height: 100%;
 }
 
@@ -84,9 +87,9 @@
 
 .ability-tag {
     display: inline-block;
-    border: 1px solid #FF8D00;
+    border: 1px solid #d4352c;
     font-size: 15px;
-    color: #FF8D00;
+    color: #d4352c;
     padding: 2px 8px;
     margin: 4px 8px 4px 0;
 }
@@ -122,14 +125,14 @@
 
     .about-ability-container {
         margin: 0 auto;
-        max-width: 60% !important;
+        max-width: 60%;
     }
 }
 
 @media (max-width: 768px) {
     .about-ability-container {
         margin: 0 auto;
-        max-width: 90%;
+        max-width: 90% !important;
     }
     .ability {
         max-width: 100%;
@@ -149,6 +152,17 @@
     .ability-tag {
         font-size: 9pt;
     }
+    .about-ability-container {
+        max-width: 90%;
+        padding: 0;
+    }
+}
+
+@media (max-width:420px) {
+    .about-ability-container {
+        max-width: 100% !important;
+        padding: 0;
+    }
 }
 
 @media (max-width:320px) {
@@ -159,5 +173,10 @@
     
     .ability-tag {
         font-size: 6pt;
+    }
+
+    .about-ability-container {
+        max-width: 100% !important;
+        padding: 0;
     }
 }

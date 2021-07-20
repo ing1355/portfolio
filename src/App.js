@@ -1,4 +1,5 @@
 import './App.css';
+import './css/Fonts.css';
 import './css/Animation.css'
 import TabsComponent from './Components/Tab/TabsComponent';
 import MainComponent from './Components/MainComponent';
@@ -6,7 +7,6 @@ import Home from './Components/Home/Home';
 import 'antd/dist/antd.css';
 import { useEffect } from 'react';
 import $ from 'jquery';
-import styles from './sass/test.sass'
 
 function App() {
   function highlightLink(anchor) {
@@ -30,6 +30,9 @@ function App() {
       }
       if (pos2 > $('#works').offset().top) {
         highlightLink('works');
+      }
+      if (pos2 > $('#career').offset().top) {
+        highlightLink('career');
       }
       if (pos2 > $('#blog').offset().top) {
         highlightLink('blog');

@@ -23,11 +23,43 @@
     z-index: 1;
     color: white;
     pointer-events: none;
+    font-family: KoPub Batang;
+    font-weight: 100;
 }
 
+@media (max-width: 576px) {
+    .home-text {
+        font-size: 20pt;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-text {
+        font-size: 18pt;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 360px) {
+    .home-text {
+        font-size: 16pt;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 321px) {
+    .home-text {
+        font-size: 14pt;
+        line-height: 24px;
+    }
+}
+
+
 .home-text-span {
-    color: #FF8D00;
     pointer-events: none;
+    font-family: KoPub Batang;
+    font-weight: bold;
 }
 
 .home-btn {
@@ -54,4 +86,38 @@
     position: absolute;
     top: 16px;
     color: white;
+}
+
+.home-arrow-container {
+    text-align: center;
+    transition: opacity 1s;
+    color: white;
+    position: relative;
+    top: 40%;
+    font-size: 16pt;
+    opacity: 0;
+    user-select: none;
+}
+
+.home-bottom-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+}
+
+.arrow-up-down {
+    animation: arrow-up-down 2.5s ease-in-out infinite;
+}
+
+@keyframes arrow-up-down {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

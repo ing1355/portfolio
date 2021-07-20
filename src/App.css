@@ -6,6 +6,11 @@ section {
   padding: 100px 0 100px;
 }
 
+section > div {
+  height: auto;
+  transition: all 1s ease-out;
+}
+
 /* @media (max-width:1024px) {
   section {
     padding: 130px 0 180px;
@@ -38,7 +43,6 @@ section > .container {
 }
 
 .title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30pt;
     text-align: center;
     align-self: flex-start;

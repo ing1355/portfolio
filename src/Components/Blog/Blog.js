@@ -7,6 +7,7 @@ import { Waypoint } from 'react-waypoint';
 import $ from 'jquery';
 import GhostContentAPI from '@tryghost/content-api';
 import { LoadingOutlined } from '@ant-design/icons';
+import AnimationActivate from '../Functions.js/AnimationActivate';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
@@ -16,23 +17,6 @@ const Blog = props => {
     const [hoverElement, setHoverElement] = useState(null);
     const [loading, setLoading] = useState(false);
     const [loadedMore, setLoadedMore] = useState(false);
-
-    function animationActivate() {
-        blogDatas.map((data, ind) => {
-            var elem = $('#blog-waypoint-' + ind),
-                animationClass = elem.attr('trigger'),
-                animationDelay = elem.attr('trigger-delay');
-            if (animationDelay) {
-                elem.css({
-                    '-webkit-animation-delay': animationDelay,
-                    '-moz-animation-delay': animationDelay,
-                    'animation-delay': animationDelay
-                });
-            }
-            elem.addClass('trigger').addClass('animated');
-            elem.addClass('trigger').addClass(animationClass);
-        })
-    }
 
     function isElementInViewport(el) {
         var rect = el.getBoundingClientRect();
@@ -51,7 +35,7 @@ const Blog = props => {
         });
 
         api.posts
-            .browse({ limit: 5, filter: 'featured:true', include: 'tags,authors' })
+            .browse({ limit: 4, filter: 'featured:true', include: 'tags,authors' })
             .then((posts) => {
                 setBlogDatas(posts);
             })
@@ -63,7 +47,9 @@ const Blog = props => {
     useEffect(() => {
         if (blogDatas.length) {
             if (isElementInViewport($('#blog-waypoint-0')[0])) {
-                animationActivate(true);
+                blogDatas.map((data, ind) => {
+                    AnimationActivate('blog-waypoint-' + ind)
+                })
             }
         }
     }, [blogDatas])
@@ -71,10 +57,11 @@ const Blog = props => {
     return (
         <section id="blog">
             <div className="blog container flex">
-                <TitleComponent title="blog" />
+                {/* <TitleComponent title="blog" /> */}
                 <Waypoint bottomOffset="300px" onEnter={e => {
-                    console.log(e);
-                    animationActivate();
+                    blogDatas.map((data, ind) => {
+                        AnimationActivate('blog-waypoint-' + ind)
+                    })
                 }} />
                 <Row className="blog-row-container" gutter={rowGutter}>
                     {

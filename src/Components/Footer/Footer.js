@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/Footer.css'
-import {FacebookOutlined, InstagramOutlined, CodepenOutlined, LinkedinOutlined, ArrowUpOutlined} from '@ant-design/icons'
+import {FacebookOutlined, InstagramOutlined, CodepenOutlined, LinkedinOutlined, DoubleRightOutlined} from '@ant-design/icons'
 
 const Footer = props => {
     return (
@@ -25,7 +25,7 @@ const Footer = props => {
                     behavior: 'smooth'
                 });
             }}>
-                <ArrowUpOutlined style={{fontSize:'2.5rem'}}/>
+                <DoubleRightOutlined style={{fontSize:'2.5rem', transform:'rotate(-90deg)'}}/>
             </button>
             <div className="footer-author">
                 MATTHEW WILLIAMS

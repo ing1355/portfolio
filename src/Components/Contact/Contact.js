@@ -8,13 +8,15 @@ import CustomWaypoint from '../CustomWaypoint';
 const { TextArea } = Input;
 
 const Contact = props => {
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: Dark').matches;
+    console.log(isDarkMode)
     return (
         <section id="contact" style={{ position: 'relative' }}>
-            <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" className="svgcolor-light" style={{ position: 'absolute', top: 0, left: 0 }}>
-                <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+            <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" className="contact-svg" style={{ position: 'absolute', top: 0, left: 0 }}>
+                <path d="M0 0 L50 100 L100 0 Z" fill={isDarkMode ? 'black' : "white"} stroke={isDarkMode ? 'black' : "white"}></path>
             </svg>
             <div className="contact container flex">
-                <TitleComponent title="contact" />
+                {/* <TitleComponent title="contact" /> */}
                 <CustomWaypoint elemId="contact-waypoint-1">
                     <div className="contact-title-text trigger" trigger="slide-in-right" id="contact-waypoint-1">
                         Have a question or want to work together?
@@ -41,13 +43,13 @@ const Contact = props => {
                             });
                         }}>
                             <Form.Item name="name">
-                                <Input placeholder="Name" />
+                                <Input placeholder="Name" className="custom-input"/>
                             </Form.Item>
                             <Form.Item name="email">
-                                <Input placeholder="Enter Email" type="email" />
+                                <Input placeholder="Enter Email" type="email" className="custom-input"/>
                             </Form.Item>
                             <Form.Item name="msg">
-                                <TextArea placeholder="Your Message" style={{ minHeight: '150px' }} />
+                                <TextArea placeholder="Your Message" style={{ minHeight: '150px' }} className="custom-input"/>
                             </Form.Item>
                             <button type="submit" className="btn-submit">
                                 SUBMIT

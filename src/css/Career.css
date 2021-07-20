@@ -1,0 +1,63 @@
+#career {
+    background-color: #80808080;
+}
+
+.timeline-center-icon {
+    font-size: 19pt;
+}
+
+.vertical-timeline-element-icon > svg {
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.vertical-timeline-element-icon {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-date-text {
+    color: black;
+    font-family: KoPub Dotum;
+    font-weight: 500;
+    font-style: oblique;
+}
+
+.timeline-logo-img {
+    height: 125px;
+    max-width: 125px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.timeline-title-text {
+    font-size: 20pt;
+    color: black;
+}
+
+.timeline-link-text, .timeline-link-text a {
+    color: black;
+    font-style: oblique;
+    text-decoration: underline rgba(0,0,0,.5);
+}
+
+.timeline-content-text {
+    color: black;
+    font-family: KoPub Dotum;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-style: oblique;
+}
+
+.timeline-term-text {
+    color: #858585;
+    font-family: KoPub Dotum;
+    font-weight: 500;
+    font-style: oblique;
+}
