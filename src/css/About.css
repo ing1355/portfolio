@@ -48,7 +48,7 @@
     height: 28px;
     display: block;
     align-items: flex-end;
-    background: #eee;
+    background: #dddddd;
     margin-bottom: 15px;
     text-align: end;
 }
@@ -62,7 +62,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: #A02921;
+    background: #a12922;
     margin: 0 0 15px 0;
 }
 

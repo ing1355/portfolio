@@ -5,7 +5,7 @@ import {FacebookOutlined, InstagramOutlined, CodepenOutlined, LinkedinOutlined, 
 const Footer = props => {
     return (
         <div className="footer-container">
-            <div className="footer-link-container flex">
+            {/* <div className="footer-link-container flex">
                 <a className="footer-link-item">
                     <LinkedinOutlined className="footer-link-icon"/>
                 </a>
@@ -18,7 +18,7 @@ const Footer = props => {
                 <a className="footer-link-item">
                     <CodepenOutlined className="footer-link-icon"/>
                 </a>
-            </div>
+            </div> */}
             <button className="footer-top-btn" onClick={() => {
                 window.scrollTo({
                     top: 0,
@@ -27,9 +27,9 @@ const Footer = props => {
             }}>
                 <DoubleRightOutlined style={{fontSize:'2.5rem', transform:'rotate(-90deg)'}}/>
             </button>
-            <div className="footer-author">
-                MATTHEW WILLIAMS
-            </div>
+            {/* <div className="footer-author">
+                SUNGWON MOON
+            </div> */}
         </div>
     )
 }

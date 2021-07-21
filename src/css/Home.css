@@ -1,6 +1,6 @@
 #home {
     height: calc(100vh + 53px);
-    background-color: #252934;
+    background-color: black;
     /* background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -18,7 +18,7 @@
 .home-text {
     font-size: 32pt;
     text-align: center;
-    line-height: 48px;
+    line-height: 64px;
     margin: 0 0 20px 0;
     z-index: 1;
     color: white;
@@ -90,10 +90,11 @@
 
 .home-arrow-container {
     text-align: center;
+    cursor: pointer;
     transition: opacity 1s;
     color: white;
     position: relative;
-    top: 40%;
+    top: 30%;
     font-size: 16pt;
     opacity: 0;
     user-select: none;

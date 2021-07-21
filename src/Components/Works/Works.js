@@ -6,7 +6,6 @@ import CustomWaypoint from '../CustomWaypoint';
 import TitleComponent from '../TitleComponent';
 import $ from 'jquery';
 import WorksModal from './WorksModal';
-import imgSrc from '../../assets/dummy1.jpg';
 import tableRecognizerImg0 from '../../assets/TableRecognizer/0.jpg';
 import KoreanLicensePlateRecognitionImg0 from '../../assets/Korean License Plate Recognition/0.jpg';
 import KoreanLicensePlateRecognitionImg1 from '../../assets/Korean License Plate Recognition/1.jpg';
@@ -20,7 +19,6 @@ import KoreanSignLanguageTranslationSystemImg2 from '../../assets/Korean Sign La
 import KoreanSignLanguageTranslationSystemImg3 from '../../assets/Korean Sign Language Translation System/3.jpg'
 import FlipperzImg0 from '../../assets/Flipperz/0.jpg'
 import FlipperzImg1 from '../../assets/Flipperz/1.jpg'
-import { useEffect } from 'react/cjs/react.development';
 
 
 const Works = props => {
@@ -52,7 +50,7 @@ const Works = props => {
             modalTitle: 'Dubai Sign Language Translation System',
             modalSubTitle: '(2020)',
             modalContent: <><p>- Sign language recognition system to be installed in Dubai World Expo Kiosk (Failed due to Corona 19)</p>
-            <p>- Improved speed by lightening + parallelizing the system used in the previous project &lt;Su:Jebi&gt;</p>
+            <p>- Improved speed by lightening + parallelizing the system used in the previous project {'<'}Su:Jebi{'>'}</p>
             <p>- Optimize execution time by allowing Openpose and video recording to operate in parallel with Multi-Process</p>
             <p>- Checkout <a href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d1aa0d70-abfd-42e8-b448-ac43939eaf40/dubai_sign_language_translate_demo.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T095247Z&X-Amz-Expires=86400&X-Amz-Signature=cac00d6fca662f5220ee053783098196f23c6936b4132155eec76d953a69174f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22dubai_sign_language_translate_demo.mp4%22">Demo Video!↗</a></p></>,
             modalImgSrc: [DubaiSignLanguageTranslationSystemImg0, DubaiSignLanguageTranslationSystemImg1],
@@ -62,10 +60,10 @@ const Works = props => {
             title: 'Korean Sign Language Translation System <Su:Jebi>',
             modalTitle: 'Korean Sign Language Translation System <Su:Jebi>',
             modalSubTitle: '(2019)',
-            modalContent: <><p>- Development of 'Sign Language Translation Application &lt;Su:Jebi&gt;' using BeeAI, an AI framework of ETRI (Android)</p>
-            <p>- Using human keypoints information extracted by Openpose[Link to: https://github.com/CMU-Perceptual-Computing-Lab/openpose] to build sign language embedding</p>
+            modalContent: <><p>- Development of 'Sign Language Translation Application {'<'}Su:Jebi{'>'}' using BeeAI, an AI framework of ETRI (Android)</p>
+            <p>- Using human keypoints information extracted by <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose">Openpose</a> to build sign language embedding</p>
             <p>- Since there is no public sign language dataset in Korea, we build our own korean sign language-text parallel dataset (216,985 Frames, 365 sentences)</p>
-            <p>- Win the (<a href="https://www.msit.go.kr/index.do">Ministry of Science and ICT</a>) Award (Grand Prize)</p></>,
+            <p>- Win the <a href="https://www.msit.go.kr/index.do">Ministry of Science and ICT</a> Award (Grand Prize)</p></>,
             modalImgSrc: [KoreanSignLanguageTranslationSystemImg0, KoreanSignLanguageTranslationSystemImg1, KoreanSignLanguageTranslationSystemImg2, KoreanSignLanguageTranslationSystemImg3],
             type : ['VISION', 'NLP']
         }, {
@@ -79,10 +77,6 @@ const Works = props => {
             type : ['NON-DL']
         }
     ]
-
-    useEffect(() => {
-        console.log(items, currentTab)
-    },[currentTab])
 
     function AnimationActivate() {
         items.map((item, ind) => {
@@ -137,6 +131,12 @@ const Works = props => {
                                         document.getElementById(textId).style.top = '80px';
                                         document.getElementById(btnId).style.opacity = 1;
                                         document.getElementById(btnId).style.bottom = '50px';
+                                    }} onTouchEnd={e => {
+                                        document.getElementById(imgId).style.opacity = 0;
+                                        document.getElementById(textId).style.opacity = 1;
+                                        document.getElementById(textId).style.top = '80px';
+                                        document.getElementById(btnId).style.opacity = 1;
+                                        document.getElementById(btnId).style.bottom = '50px';
                                     }} onMouseLeave={e => {
                                         document.getElementById(imgId).style.opacity = 1;
                                         document.getElementById(textId).style.opacity = 0;
@@ -149,7 +149,7 @@ const Works = props => {
                                         <div style={{ fontSize: '16pt' }}>
                                             {title}
                                         </div>
-                                        <span style={{ color: '#FF8D00' }}>
+                                        <span style={{ color: '#d3452c' }}>
                                             {type.map((t, tInd) => '#' + t + ' ')}
                                         </span>
                                     </div>

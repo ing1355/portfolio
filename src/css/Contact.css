@@ -2,7 +2,7 @@
     /* background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
     background-repeat : no-repeat;
     background-size : cover; */
-    background-color: #252934;
+    background-color: black;
 }
 
 .contact-input-container {
@@ -12,14 +12,16 @@
 
 .contact-title-text {
     text-align: center;
-    color: #FF8D00;
-    font-size: 2rem;
-    margin: 0 0 40px 0;
+    font-family: KoPub Dotum;
+    font-weight: bold;
+    color: white;
+    font-size: 6rem;
+    margin: 40px 0 40px 0;
 }
 
 @media (max-width: 1024px) {
     .contact-title-text {
-        font-size: 20pt;
+        font-size: 5rem;
     }
 }
 
@@ -30,8 +32,8 @@
         margin: 0 auto;
     }
     .contact-title-text {
-        font-size: 12pt;
-        margin: 0 0 20px 0;
+        font-size: 4rem;
+        margin: 20px 0 20px 0;
     }
     .contact.title {
         margin: 0 0 20px 0;
@@ -40,8 +42,8 @@
 
 @media (max-width: 360px) {
     .contact-title-text {
-        font-size: 12pt;
-        margin: 0 0 20px 0;
+        font-size: 3rem;
+        margin: 20px 0 20px 0;
     }
     .contact.title {
         margin: 0 0 20px 0;
@@ -53,9 +55,9 @@
 }
 
 .btn-submit {
-    float: right;
+    margin: 0 auto;
     font-size: 12pt;
-    margin: 5px 0 0;
+    margin: 16px 0 0;
     padding: 10px 30px;
     border: 2px solid #fff;
     background: transparent;
@@ -65,8 +67,8 @@
 }
 
 .btn-submit:hover {
-    background: #FF8D00;
-    border-color: #FF8D00;
+    background: #d3452c;
+    border-color: #d3452c;
 }
 
 .custom-input {

@@ -53,7 +53,7 @@
 }
 
 .tabs-menu-item.active {
-    color: #FF8D00;
+    color: #d4352c;
 }
 
 
@@ -92,7 +92,7 @@
     }
 
     .tabs-sub-container.opened {
-        height: 220px;
+        height: 255px;
     }
 
     .tabs-container {

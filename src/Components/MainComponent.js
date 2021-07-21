@@ -11,8 +11,8 @@ const MainComponent = props => {
     return (
         <>
             <About/>
-            <Works/>
             <Career/>
+            <Works/>
             <Blog/>
             <Contact/>
             <Footer/>

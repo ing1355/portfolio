@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Modal} from 'antd';
 import {CloseOutlined, LeftOutlined, RightOutlined} from '@ant-design/icons';
 import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
 
 const WorksModal = ({modalOpen, onCancel, modalTitle, modalSubTitle, modalImgSrc, modalContent}) => {
     const [modalImgInd, setModalImgInd] = useState(0);
     
     useEffect(() => {
-        setModalImgInd(0);
+        if(modalOpen) {
+            setModalImgInd(0);
+        }
     },[modalOpen])
 
     return (
@@ -16,7 +17,7 @@ const WorksModal = ({modalOpen, onCancel, modalTitle, modalSubTitle, modalImgSrc
             onCancel();
         }}>
             <div className="modal-title-img-container">
-                <img width="100%" height="100%" src={modalImgSrc[modalImgInd]} className="modal-title-img"/>
+                <img width="auto" height="100%" src={modalImgSrc[modalImgInd]} className="modal-title-img"/>
                 {modalImgInd !== 0 && <LeftOutlined className="modal-title-icon left" onClick={() => {
                     setModalImgInd(modalImgInd - 1)
                 }}/>}

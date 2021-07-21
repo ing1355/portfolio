@@ -51,11 +51,11 @@ const TabsComponent = props => {
                 <div className="tabs-menu-item" onClick={() => { tabClick('about') }} dest='about'>
                     ABOUT
                 </div>
-                <div className="tabs-menu-item" onClick={() => { tabClick('works') }} dest='works'>
-                    WORKS
-                </div>
                 <div className="tabs-menu-item" onClick={() => { tabClick('career') }} dest='career'>
                     CAREER
+                </div>
+                <div className="tabs-menu-item" onClick={() => { tabClick('works') }} dest='works'>
+                    WORKS
                 </div>
                 <div className="tabs-menu-item" onClick={() => { tabClick('blog') }} dest='blog'>
                     BLOG

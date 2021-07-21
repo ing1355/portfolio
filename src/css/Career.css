@@ -1,5 +1,5 @@
 #career {
-    background-color: #80808080;
+    background-color: #e8e8e8;
 }
 
 .timeline-center-icon {
@@ -60,4 +60,8 @@
     font-family: KoPub Dotum;
     font-weight: 500;
     font-style: oblique;
+}
+
+.vertical-timeline.vertical-timeline--animate.vertical-timeline--two-columns {
+    margin: 0 !important;
 }

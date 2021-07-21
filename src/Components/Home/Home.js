@@ -11,7 +11,7 @@ const Home = props => {
     function animationEnableFunc() {
         var elem = $('#home-bottom-arrow'),
             animationClass = elem.attr('trigger');
-        if(!init) {
+        if (!init) {
             setInit(true);
             elem.addClass(animationClass);
         } else {
@@ -23,7 +23,7 @@ const Home = props => {
         var elem = $('#home-bottom-arrow');
         elem.css('visibility', 'hidden')
     }
-    
+
     return (
         <section id='home' className="flex">
             <Waypoint onEnter={e => {
@@ -46,7 +46,7 @@ const Home = props => {
                 A Tribe Called <span className="home-text-span"> Sungwon Moon.</span><br />
                 Any Interest?
             </div>
-            <button className="home-btn"
+            {/* <button className="home-btn"
                 onMouseEnter={e => {
                     document.getElementById('home-btn-icon').style.transform = 'rotate(90deg)';
                 }} onMouseLeave={e => {
@@ -58,8 +58,13 @@ const Home = props => {
                     })
                 }}>
                 View my work <ArrowRightOutlined className="home-btn-icon" id="home-btn-icon" />
-            </button>
-            <div className="home-arrow-container" id="home-bottom-arrow" trigger="arrow-up-down">
+            </button> */}
+            <div className="home-arrow-container" id="home-bottom-arrow" trigger="arrow-up-down" onClick={() => {
+                window.scrollTo({
+                    top: document.getElementById('about').offsetTop + 43,
+                    behavior: 'smooth'
+                })
+            }}>
                 <div>
                     YEAH!
                 </div>
@@ -69,7 +74,7 @@ const Home = props => {
             </div>
             <Waypoint onLeave={e => {
                 animationDisableFunc();
-            }}/>
+            }} />
         </section>
     )
 }

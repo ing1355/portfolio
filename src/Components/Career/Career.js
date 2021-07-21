@@ -95,8 +95,8 @@ const Career = props => {
                             position="right"
                             contentStyle={{ borderTop: '3px solid ' + getIconColorByType(type), background: '#fff', color: '#fff', fontFamily: 'KoPub Dotum', fontWeight: 'bold', padding: '1.5em 2em'}}
                             contentArrowStyle={{ borderRight: '7px solid  white', top: '16px' }}
-                            date={term}
-                            iconStyle={{ background: getIconColorByType(type), color: '#fff' }}
+                            // date={term}
+                            iconStyle={{ background: getIconColorByType(type), color: '#fff', filter:'fliph()' }}
                             icon={getIconByType(type)}
                             dateClassName="timeline-date-text"
                         >

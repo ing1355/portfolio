@@ -1,6 +1,6 @@
 .footer-container {
-    height: 250px;
-    background: rgb(27,36,47);
+    height: 150px;
+    background: black;
     margin: 0 auto;
     position: relative;
 }
@@ -32,13 +32,13 @@
 
 .footer-top-btn {
     position: absolute;
-    top: 0;
+    top: 60px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
     border: none;
-    background: #FF8D00;
+    background: transparent;
     color: white;
     cursor: pointer;
 }

@@ -19,10 +19,11 @@
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.5s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .works-tab-item.active {
-    background-color: #C26B00;
+    background-color: #a12922;
     color: white;
 }
 
@@ -112,14 +113,14 @@
     width: 170px;
     z-index: 2;
     margin: 0 auto;
-    color: #1b242f;
+    color: #d3452c;
     transition: all 0.3s ease-in-out;
-    border: 2px solid #FF8D00;
+    border: 2px solid #d3452c;
     opacity: 0;
 }
 
 .works-items-card-btn:hover {
-    background: #FF8D00;
+    background: #d3452c;
     cursor: pointer;
     color: white;
 }
@@ -156,7 +157,7 @@
 }
 
 .modal-body-container {
-    padding: 36px 24px 24px 24px;
+    padding: 8px 24px 24px 24px;
 }
 
 @media (max-width: 300px) {
@@ -172,19 +173,20 @@
 }
 
 .ant-modal-body {
-    padding: 0 !important;
+    padding: 16px 0 0 0 !important;
 }
 
 .modal-title-img-container {
     position: relative;
-    height: 300px;
+    min-height: 300px;
 }
 
 .modal-title-img {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     z-index: 1;
+    transform: translateX(-50%);
 }
 
 .modal-title-icon {

@@ -28,11 +28,11 @@ function App() {
       if (pos2 > $('#about').offset().top) {
         highlightLink('about');
       }
-      if (pos2 > $('#works').offset().top) {
-        highlightLink('works');
-      }
       if (pos2 > $('#career').offset().top) {
         highlightLink('career');
+      }
+      if (pos2 > $('#works').offset().top) {
+        highlightLink('works');
       }
       if (pos2 > $('#blog').offset().top) {
         highlightLink('blog');

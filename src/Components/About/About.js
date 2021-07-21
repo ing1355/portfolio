@@ -23,7 +23,7 @@ const About = props => {
     const profile = {
         profile_imgSrc : profileImg,
         profile_title : "Sungwon Moon",
-        profile_description :  <>Deep Learning Researcher for <a style={{color:'#d4352c'}} href="https://www.lomin.ai/">Lomin</a>.<br/>
+        profile_description :  <>Deep Learning Researcher for <a style={{color:'#d4352c', textDecoration:'underline'}} href="https://www.lomin.ai/">Lomin</a>.<br/>
         I am very interested in solving the world’s problems<br/>
         with HIGH-LEVEL technology, such as DL!</>
     }
