@@ -19,7 +19,7 @@ const Footer = props => {
                     <CodepenOutlined className="footer-link-icon"/>
                 </a>
             </div> */}
-            <button className="footer-top-btn" onClick={() => {
+            <button className="footer-top-btn arrow-up-down2" onClick={() => {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'

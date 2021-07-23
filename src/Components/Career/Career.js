@@ -89,10 +89,10 @@ const Career = props => {
         <section id="career">
             <VerticalTimeline>
                 {
-                    items.map(item => {
+                    items.map((item,ind) => {
                         const { type, title, linkText, subscription, term, logo } = item;
                         return <VerticalTimelineElement
-                            position="right"
+                            position={ind % 2 === 0 ? "left" : 'right'}
                             contentStyle={{ borderTop: '3px solid ' + getIconColorByType(type), background: '#fff', color: '#fff', fontFamily: 'KoPub Dotum', fontWeight: 'bold', padding: '1.5em 2em'}}
                             contentArrowStyle={{ borderRight: '7px solid  white', top: '16px' }}
                             // date={term}

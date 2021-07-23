@@ -32,9 +32,8 @@
 
 .footer-top-btn {
     position: absolute;
-    top: 60px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 80px;
     height: 80px;
     border: none;
@@ -50,4 +49,23 @@
     color: rgba(255,255,255,.2);
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+.arrow-up-down2 {
+    animation: arrow-up-down2 2.5s ease-in-out infinite;
+}
+
+@keyframes arrow-up-down2 {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translate(-50%,30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%,0);
+        opacity: 1;
+    }
 }
