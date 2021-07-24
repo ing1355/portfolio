@@ -36,21 +36,25 @@
 }
 
 .timeline-title-text {
-    font-size: 20pt;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-size: 23pt;
+    line-height: 1.3em;
     color: black;
 }
 
 .timeline-link-text, .timeline-link-text a {
+    font-size: 12pt;
     color: black;
     font-style: oblique;
-    text-decoration: underline rgba(0,0,0,.5);
 }
 
 .timeline-content-text {
+    font-size: 11.5pt;
     color: black;
     font-family: KoPub Dotum;
     font-weight: 500;
-    margin-top: 16px;
+    margin-top: 4px;
     margin-bottom: 16px;
     font-style: oblique;
 }

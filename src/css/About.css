@@ -26,6 +26,7 @@
     width: 100%;
     margin-top: 50px;
     text-align: center;
+    letter-spacing: 0.01em;
 }
 
 .about-profile-img {
@@ -36,10 +37,10 @@
 
 .about-profile-text {
     margin: 20px 0 15px 0;
-    font-size: 22pt;
+    font-size: 24pt;
     font-family: KoPub Dotum;
     font-weight: bold;
-    letter-spacing: -2px;
+    letter-spacing: 0.01em;
 }
 
 .ability {
@@ -51,6 +52,7 @@
     background: #dddddd;
     margin-bottom: 15px;
     text-align: end;
+    letter-spacing: 0.02em;
 }
 
 .ability-bar {

@@ -42,7 +42,7 @@ const Career = props => {
         {
             type: 'work',
             title: 'CV Researcher',
-            linkText: <a href="https://www.lomin.ai">Lomin Inc.</a>,
+            linkText: <a href="https://www.lomin.ai"><u>Lomin</u></a>,
             subscription: 'OCR, Document Classification, Table Recognition',
             term: 'March 2021 ~',
             logo: lominLogo
@@ -50,7 +50,7 @@ const Career = props => {
         {
             type: 'education',
             title: 'Master of Science',
-            linkText: <a href="https://icps.korea.ac.kr">Korea University (ICPS)</a>,
+            linkText: <a href="https://icps.korea.ac.kr"><u>Korea University (ICPS)</u></a>,
             subscription: 'Sign Language Translation, Vehicle Detection & License Plate Recognition',
             term: 'March 2019 ~ February 2021',
             logo: koreaUnivLogo
@@ -58,8 +58,8 @@ const Career = props => {
         {
             type: 'work',
             title: 'Content Creator',
-            linkText: <><a href="https://aiffel.io">AIFFEL</a> of <a href="https://modulabs.co.kr">MODULABS</a></>,
-            subscription: <><span>Create Lecture &amp; Project Contents About NLP (GOING-DEEPER STAGE)</span><br />
+            linkText: <><a href="https://aiffel.io"><u>AIFFEL</u></a> of <a href="https://modulabs.co.kr"><u>MODULABS</u></a></>,
+            subscription: <><span><b>: Create NLP Lecture &amp; Project Contents (GOING-DEEPER STAGE)</b></span><br /><br />
                 <span>Language Modeling, Sequence to Sequence, Attention, Transformer, Chatbot</span></>,
             term: 'February 2020 ~ July 2020',
             logo: aiffelLogo
@@ -67,20 +67,20 @@ const Career = props => {
         {
             type: 'work',
             title: 'AI Service Reviewer',
-            linkText: <a href="https://www.ncloud.com">NAVER CLOUD PLATFORM</a>,
-            subscription: <><span>Write Reviews for AI Service provided by NCP</span><br />
+            linkText: <a href="https://www.ncloud.com"><u>NAVER CLOUD PLATFORM</u></a>,
+            subscription: <><span><b>: Write Reviews for AI Service provided by NCP</b></span><br /><br />
                 <span>OCR, Speech to Text , Text to Speech, Machine Translation</span></>,
             term: 'December 2019 ~ May 2020',
             logo: naverLogo
         },
         {
             type: 'honor',
-            title: <>Grand Prize at<br/>"KSB AI Framework Contest"</>,
-            linkText: <><a href="https://www.msit.go.kr/index.do">Ministry of Science and ICT</a> Award</>,
-            subscription: <><span>Implement Korean Sign Language Translation System for Deaf</span><br />
+            title: <>GRAND PRIZE at<br/>&lt;KSB AI Framework Contest&gt;</>,
+            linkText: <><a href="https://www.msit.go.kr/index.do"><u>Ministry of Science and ICT</u></a> Award</>,
+            subscription: <><span><b>: Implement Korean Sign Language Translation System for Deaf</b></span><br /><br />
                 <span>Human Pose Estimation, Machine Translation, Transformer</span><br />
-                <span><a href="http://biz.heraldcorp.com/view.php?ud=20191023000641">Article 1</a>&nbsp;
-                <a href={`https://www.edaily.co.kr/news/read?newsId=03650646622655872&mediaCodeNo=257`}>Article 2</a></span></>,
+                <span><a href="http://biz.heraldcorp.com/view.php?ud=20191023000641">&lt;Article 1&gt;</a>&nbsp;
+                <a href={`https://www.edaily.co.kr/news/read?newsId=03650646622655872&mediaCodeNo=257`}>&lt;Article 2&gt;</a></span></>,
             term: 'October 2019',
             logo: beeaiLogo
         },
@@ -93,7 +93,7 @@ const Career = props => {
                         const { type, title, linkText, subscription, term, logo } = item;
                         return <VerticalTimelineElement
                             position={ind % 2 === 0 ? "left" : 'right'}
-                            contentStyle={{ borderTop: '3px solid ' + getIconColorByType(type), background: '#fff', color: '#fff', fontFamily: 'KoPub Dotum', fontWeight: 'bold', padding: '1.5em 2em'}}
+                            contentStyle={{ borderTop: '4px solid ' + getIconColorByType(type), background: '#fff', color: '#fff', fontFamily: 'KoPub Dotum', fontWeight: 'bold', padding: '1.5em 2em'}}
                             contentArrowStyle={{ borderRight: '7px solid  white', top: '16px' }}
                             // date={term}
                             iconStyle={{ background: getIconColorByType(type), color: '#fff', filter:'fliph()' }}
