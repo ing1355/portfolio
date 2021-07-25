@@ -60,6 +60,7 @@
     pointer-events: none;
     font-family: KoPub Batang;
     font-weight: bold;
+    letter-spacing: 0.02em;
 }
 
 .home-btn {
