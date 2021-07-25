@@ -43,6 +43,10 @@
     letter-spacing: 0.01em;
 }
 
+.about-profile-description {
+    margin: 0 auto;
+}
+
 .ability {
     /* max-width: 90%; */
     position: relative;
@@ -110,7 +114,7 @@
     }
     .about-ability-container {
         margin: 0 auto !important;
-        max-width: 80% !important;
+        max-width: 60% !important;
     }
     .about-profile-container {
         height: 100%;
@@ -118,23 +122,29 @@
     .ability-tag {
         font-size: 11pt;
     }
+    .about-profile-description {
+        max-width: 400px;
+    }
 }
 
 @media (min-width: 992px) {
     .about-profile-container {
         height: 100%;
     }
-
+    
     .about-ability-container {
         margin: 0 auto;
         max-width: 60%;
+    }
+    .about-profile-description {
+        max-width: 400px;
     }
 }
 
 @media (max-width: 768px) {
     .about-ability-container {
         margin: 0 auto;
-        max-width: 90% !important;
+        max-width: 80% !important;
     }
     .ability {
         max-width: 100%;
@@ -143,6 +153,9 @@
     }
     .ability-percentage {
         display: none;
+    }
+    .about-profile-description {
+        max-width: 400px;
     }
 }
 
@@ -158,12 +171,18 @@
         max-width: 90%;
         padding: 0;
     }
+    .about-profile-description {
+        max-width: 80%;
+    }
 }
 
 @media (max-width:420px) {
     .about-ability-container {
-        max-width: 100% !important;
+        max-width: 90% !important;
         padding: 0;
+    }
+    .about-profile-description {
+        max-width: 90%;
     }
 }
 
@@ -178,7 +197,7 @@
     }
 
     .about-ability-container {
-        max-width: 100% !important;
+        max-width: 90% !important;
         padding: 0;
     }
 }

@@ -20,10 +20,12 @@ import KoreanSignLanguageTranslationSystemImg3 from '../../assets/Korean Sign La
 import FlipperzImg0 from '../../assets/Flipperz/0.jpg'
 import FlipperzImg1 from '../../assets/Flipperz/1.jpg'
 import mixitup from 'mixitup'
+import { FormattedMessage, useIntl } from 'react-intl';
 
 var mixer;
 
 const Works = props => {
+    const {formatMessage} = useIntl();
     const tabs = ['ALL', 'VISION', 'NLP', 'NON-DL'];
     const [currentTab, setCurrentTab] = useState(tabs[0]);
     const [modalOpen, setModalOpen] = useState(-1);
@@ -31,51 +33,51 @@ const Works = props => {
     var id = 0;
     const items = [
         {
-            title: 'Table Recognizer',
-            modalTitle: 'Table Recognizer',
+            title: <FormattedMessage id="worksTitle1"/>,
+            modalTitle: <FormattedMessage id="worksTitle1"/>,
             modalSubTitle: '2021',
-            modalContent: <><p>- For process unstructured document stably, we need to extract the maximum information from raw data.</p>
-                <p>- Therefore, develop a model that can recognize the form of a table and convert it into a defined data structure (details cannot be mentioned because this development is the property of Lomin Inc.)</p>
-                <p>- The table was recognized with a deep learning model, and then refined using traditional computer vision algorithms.</p></>,
+            modalContent: <><p><FormattedMessage id="worksContent1_1"/></p>
+                <p><FormattedMessage id="worksContent1_2"/></p>
+                <p><FormattedMessage id="worksContent1_3"/></p></>,
             modalImgSrc: [tableRecognizerImg0],
             type: ['VISION']
         }, {
-            title: 'Korean License Plate Recognition',
-            modalTitle: 'Korean License Plate Recognition',
+            title: <FormattedMessage id="worksTitle2"/>,
+            modalTitle: <FormattedMessage id="worksTitle2"/>,
             modalSubTitle: '2020',
-            modalContent: <><p>- System consisting of Vehicle Detection (YOLACT) + License Plate Detection (WPOD-NET) + License Plate Recognition (LPRNet)</p>
-                <p>- Since license plate data is difficult to collect due to personal information issues, we generate synthesis data using GANs</p>
-                <p>- Checkout My Master's Thesis!<br /><a href="https://library.korea.ac.kr/detail/?cid=CAT000046074034&ctype=t">&lt;딥러닝을 이용한 종단 간 차량 번호판 인식 알고리즘 및 시스템 구현&gt;</a></p></>,
+            modalContent: <><p><FormattedMessage id="worksContent2_1"/></p>
+                <p><FormattedMessage id="worksContent2_2"/></p>
+                <p><FormattedMessage id="worksContent2_3"/><br /><a href="https://library.korea.ac.kr/detail/?cid=CAT000046074034&ctype=t">&lt;<FormattedMessage id="worksContent2_4"/>&gt;</a></p></>,
             modalImgSrc: [KoreanLicensePlateRecognitionImg0, KoreanLicensePlateRecognitionImg1, KoreanLicensePlateRecognitionImg2, KoreanLicensePlateRecognitionImg3],
             type: ['VISION']
         }, {
-            title: 'Dubai Sign Language Translation System',
-            modalTitle: 'Dubai Sign Language Translation System',
+            title: <FormattedMessage id="worksTitle3"/>,
+            modalTitle: <FormattedMessage id="worksTitle3"/>,
             modalSubTitle: '2020',
-            modalContent: <><p>- Sign language recognition system to be installed in Dubai World Expo Kiosk (Failed due to Corona 19)</p>
-                <p>- Improved speed by lightening + parallelizing the system used in the previous project {'<'}Su:Jebi{'>'}</p>
-                <p>- Optimize execution time by allowing Openpose and video recording to operate in parallel with Multi-Process</p>
-                <p>- Checkout <a href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d1aa0d70-abfd-42e8-b448-ac43939eaf40/dubai_sign_language_translate_demo.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T095247Z&X-Amz-Expires=86400&X-Amz-Signature=cac00d6fca662f5220ee053783098196f23c6936b4132155eec76d953a69174f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22dubai_sign_language_translate_demo.mp4%22">Demo Video!</a></p></>,
+            modalContent: <><p><FormattedMessage id="worksContent3_1"/></p>
+                <p><FormattedMessage id="worksContent3_2"/></p>
+                <p><FormattedMessage id="worksContent3_3"/></p>
+                <p><FormattedMessage id="worksContent3_4"/><a href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d1aa0d70-abfd-42e8-b448-ac43939eaf40/dubai_sign_language_translate_demo.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T095247Z&X-Amz-Expires=86400&X-Amz-Signature=cac00d6fca662f5220ee053783098196f23c6936b4132155eec76d953a69174f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22dubai_sign_language_translate_demo.mp4%22"><FormattedMessage id="worksContent3_5"/></a></p></>,
             modalImgSrc: [DubaiSignLanguageTranslationSystemImg0, DubaiSignLanguageTranslationSystemImg1],
             type: ['VISION', 'NLP']
         },
         {
-            title: 'Korean Sign Language Translation System <Su:Jebi>',
-            modalTitle: 'Korean Sign Language Translation System <Su:Jebi>',
+            title: <FormattedMessage id="worksTitle4"/>,
+            modalTitle: <FormattedMessage id="worksTitle4"/>,
             modalSubTitle: '2019',
-            modalContent: <><p>- Development of 'Sign Language Translation Application {'<'}Su:Jebi{'>'}' using BeeAI, an AI framework of ETRI (Android)</p>
-                <p>- Using human keypoints information extracted by <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose"><u>Openpose</u></a> to build sign language embedding</p>
-                <p>- Since there is no public sign language dataset in Korea, we build our own korean sign language-text parallel dataset (216,985 Frames, 365 sentences)</p>
-                <p>- Win the <a href="https://www.msit.go.kr/index.do"><u>Ministry of Science and ICT</u></a> Award (Grand Prize)</p></>,
+            modalContent: <><p><FormattedMessage id="worksContent4_1"/></p>
+                <p><FormattedMessage id="worksContent4_2" values={{url : <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose"><u>Openpose</u></a>}}/></p>
+                <p><FormattedMessage id="worksContent4_3"/></p>
+                <p><FormattedMessage id="worksContent4_4"/><a href="https://www.msit.go.kr/index.do"><u><FormattedMessage id="worksContent4_5"/></u></a><FormattedMessage id="worksContent4_6"/></p></>,
             modalImgSrc: [KoreanSignLanguageTranslationSystemImg0, KoreanSignLanguageTranslationSystemImg1, KoreanSignLanguageTranslationSystemImg2, KoreanSignLanguageTranslationSystemImg3],
             type: ['VISION', 'NLP']
         }, {
-            title: 'Flipperz',
-            modalTitle: 'Flipperz',
+            title: <FormattedMessage id="worksTitle5"/>,
+            modalTitle: <FormattedMessage id="worksTitle5"/>,
             modalSubTitle: '2017',
-            modalContent: <><p>- An application that flips multiple images at once (iOS)</p>
-                <p>- Indirectly solves the problem that images(especially selfies) are stored in reverse when shooting with the iPhone front camera</p>
-                <p>- Currently in Deactivate state due to expiration of Apple Developer contract</p></>,
+            modalContent: <><p><FormattedMessage id="worksContent5_1"/></p>
+                <p><FormattedMessage id="worksContent5_2"/></p>
+                <p><FormattedMessage id="worksContent5_3"/></p></>,
             modalImgSrc: [FlipperzImg0, FlipperzImg1],
             type: ['NON-DL']
         }
@@ -93,32 +95,50 @@ const Works = props => {
                     'animation-delay': animationDelay
                 });
             }
-            if(!isAnimation) {
+            if (!isAnimation) {
                 elem.addClass('trigger').addClass('animated').addClass(animationClass);
                 setTimeout(() => {
-                    elem.removeClass('trigger').removeClass(animationClass)                
-                }, 1500);
+                    elem.removeClass('trigger').removeClass('animated').removeClass(animationClass)
+                    mixer = mixitup($('#test-row'), {
+                        selectors: {
+                            target: '.mix'
+                        },
+                        animation: {
+                            duration: 300
+                        }
+                    })
+                }, 2000);
             }
-        }) 
+        })
         setIsAnimation(true);
     }
 
     useEffect(() => {
         if (currentTab) {
-            // if(mixer) mixer.filter('.' + currentTab)
+            if (currentTab !== 'ALL') {
+                items.map((item, ind) => {
+                    var elem = $('#works-waypoint-' + (2 + ind)),
+                        animationClass = elem.attr('trigger');
+                    if (elem.hasClass('trigger')) {
+                        elem.removeClass('trigger').removeClass('animated').removeClass(animationClass)
+                        setTimeout(() => {
+                            mixer = mixitup($('#test-row'), {
+                                selectors: {
+                                    target: '.mix'
+                                },
+                                animation: {
+                                    duration: 300
+                                }
+                            })                            
+                        }, 1000);
+                    }
+                })
+            }
         }
     }, [currentTab])
 
 
     useEffect(() => {
-        mixer = mixitup($('#test-row'), {
-            selectors: {
-                target: '.mix'
-            },
-            animation: {
-                duration: 400
-            }
-        })
     }, [])
 
     return (
@@ -132,7 +152,7 @@ const Works = props => {
                                 return <div key={tab + ind} className={"works-tab-item" + (currentTab === tab ? ' active' : '')} data-filter={tab === 'ALL' ? '.mix' : '.' + tab}
                                     onClick={() => {
                                         setCurrentTab(tab)
-                                    }}>{tab}</div>
+                                    }}><FormattedMessage id={tab}/></div>
                             })}
                         </div>
                     </div>
@@ -150,7 +170,7 @@ const Works = props => {
                             return <Col xs={24} sm={12} md={12} lg={8} key={'card' + ind} data-my-order="1"
                                 className={"mix flex works-items-col-container " + type.join(' ')} trigger="slide-in-bottom" id={"works-waypoint-" + (2 + ind)} trigger-delay={`${(ind / 10) + 0.2}s`}>
                                 <div className="works-items-card-container"
-                                    onMouseEnter={e => {
+                                    onMouseOver={e => {
                                         document.getElementById(imgId).style.opacity = 0;
                                         document.getElementById(textId).style.opacity = 1;
                                         document.getElementById(textId).style.top = '80px';
@@ -184,7 +204,7 @@ const Works = props => {
                                             {title}
                                         </div>
                                         <span style={{ color: '#d3452c' }}>
-                                            {type.map((t, tInd) => '#' + t + ' ')}
+                                            {type.map((t, tInd) => '#' + formatMessage({id: t}) + ' ')}
                                         </span>
                                     </div>
                                     <button className="works-items-card-btn" id={btnId} onClick={() => {

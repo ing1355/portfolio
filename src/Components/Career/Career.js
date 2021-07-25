@@ -11,8 +11,10 @@ import naverLogo from '../../assets/logos/naver_cloud_platform.png'
 import beeaiLogo from '../../assets/logos/beeai.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const Career = props => {
+    const {formatMessage} = useIntl();
     function getIconByType(type) {
         switch (type) {
             case 'work':
@@ -41,47 +43,47 @@ const Career = props => {
     const items = [
         {
             type: 'work',
-            title: 'CV Researcher',
-            linkText: <a href="https://www.lomin.ai"><u>Lomin</u></a>,
-            subscription: 'OCR, Document Classification, Table Recognition',
-            term: 'March 2021 ~',
+            title: <FormattedMessage id="careerTitle1"/>,
+            linkText: <a href="https://www.lomin.ai"><u><FormattedMessage id="careerDepartment1"/></u></a>,
+            subscription: <FormattedMessage id="careerDescription1"/>,
+            term: <FormattedMessage id="careerDate1"/>,
             logo: lominLogo
         },
         {
             type: 'education',
-            title: 'Master of Science',
-            linkText: <a href="https://icps.korea.ac.kr"><u>Korea University (ICPS)</u></a>,
-            subscription: 'Sign Language Translation, Vehicle Detection & License Plate Recognition',
-            term: 'March 2019 ~ February 2021',
+            title: <FormattedMessage id="careerTitle2"/>,
+            linkText: <a href="https://icps.korea.ac.kr"><u><FormattedMessage id="careerDepartment2"/></u></a>,
+            subscription: <FormattedMessage id="careerDescription2"/>,
+            term: <FormattedMessage id="careerDate2"/>,
             logo: koreaUnivLogo
         },
         {
             type: 'work',
-            title: 'Content Creator',
-            linkText: <><a href="https://aiffel.io"><u>AIFFEL</u></a> of <a href="https://modulabs.co.kr"><u>MODULABS</u></a></>,
-            subscription: <><span><b>: Create NLP Lecture &amp; Project Contents (GOING-DEEPER STAGE)</b></span><br /><br />
-                <span>Language Modeling, Sequence to Sequence, Attention, Transformer, Chatbot</span></>,
-            term: 'February 2020 ~ July 2020',
+            title: <FormattedMessage id="careerTitle3"/>,
+            linkText: <><a href={formatMessage({id:"careerLink1"})}><u><FormattedMessage id="careerDepartment3_1"/></u></a><FormattedMessage id="careerDepartment3_2"/><a href={formatMessage({id:"careerLink2"})}><u><FormattedMessage id="careerDepartment3_3"/></u></a></>,
+            subscription: <><span><b><FormattedMessage id="careerDepartment3_4"/></b></span><br /><br />
+                <span><FormattedMessage id="careerDescription3"/></span></>,
+            term: <FormattedMessage id="careerDate3"/>,
             logo: aiffelLogo
         },
         {
             type: 'work',
-            title: 'AI Service Reviewer',
-            linkText: <a href="https://www.ncloud.com"><u>NAVER CLOUD PLATFORM</u></a>,
-            subscription: <><span><b>: Write Reviews for AI Service provided by NCP</b></span><br /><br />
-                <span>OCR, Speech to Text , Text to Speech, Machine Translation</span></>,
-            term: 'December 2019 ~ May 2020',
+            title: <FormattedMessage id="careerTitle4"/>,
+            linkText: <a href="https://www.ncloud.com"><u><FormattedMessage id="careerDepartment4_1"/></u></a>,
+            subscription: <><span><b><FormattedMessage id="careerDepartment4_2"/></b></span><br /><br />
+                <span><FormattedMessage id="careerDescription4"/></span></>,
+            term: <FormattedMessage id="careerDate4"/>,
             logo: naverLogo
         },
         {
             type: 'honor',
-            title: <>GRAND PRIZE at<br/>&lt;KSB AI Framework Contest&gt;</>,
-            linkText: <><a href="https://www.msit.go.kr/index.do"><u>Ministry of Science and ICT</u></a> Award</>,
-            subscription: <><span><b>: Implement Korean Sign Language Translation System for Deaf</b></span><br /><br />
-                <span>Human Pose Estimation, Machine Translation, Transformer</span><br />
-                <span><a href="http://biz.heraldcorp.com/view.php?ud=20191023000641">&lt;Article 1&gt;</a>&nbsp;
-                <a href={`https://www.edaily.co.kr/news/read?newsId=03650646622655872&mediaCodeNo=257`}>&lt;Article 2&gt;</a></span></>,
-            term: 'October 2019',
+            title: <><FormattedMessage id="careerTitle5_1"/><br/><FormattedMessage id="careerTitle5_2"/></>,
+            linkText: <><a href="https://www.msit.go.kr/index.do"><u><FormattedMessage id="careerDepartment5_1"/></u></a><FormattedMessage id="careerDepartment5_2"/></>,
+            subscription: <><span><b><FormattedMessage id="careerDepartment5_3"/></b></span><br /><br />
+                <span><FormattedMessage id="careerDescription5"/></span><br />
+                <span><a href="http://biz.heraldcorp.com/view.php?ud=20191023000641">&lt;<FormattedMessage id="careerArticle"/> 1&gt;</a>&nbsp;
+                <a href={`https://www.edaily.co.kr/news/read?newsId=03650646622655872&mediaCodeNo=257`}>&lt;<FormattedMessage id="careerArticle"/> 2&gt;</a></span></>,
+            term: <FormattedMessage id="careerDate5"/>,
             logo: beeaiLogo
         },
     ]

@@ -5,6 +5,7 @@ import TitleComponent from '../TitleComponent';
 import CustomWaypoint from '../CustomWaypoint';
 import { items } from './AboutItems';
 import profileImg from '../../assets/profile.jpg'
+import { FormattedMessage } from 'react-intl';
 
 const About = props => {
     const abilities = {
@@ -16,16 +17,15 @@ const About = props => {
     }
 
     const tags = [
-        'Natural Language Processing', 'Computer Vision', 'Machine Transition', 'OCR', 'Document Recognition',
-        'Synthesis Data Generation', 'Sign Language Translation', 'Human Pose Estimation'
+        <FormattedMessage id="aboutProfileTag1"/>, <FormattedMessage id="aboutProfileTag2"/>, <FormattedMessage id="aboutProfileTag3"/>, <FormattedMessage id="aboutProfileTag4"/>, <FormattedMessage id="aboutProfileTag5"/>,
+        <FormattedMessage id="aboutProfileTag6"/>, <FormattedMessage id="aboutProfileTag7"/>, <FormattedMessage id="aboutProfileTag8"/>
     ]
 
     const profile = {
         profile_imgSrc : profileImg,
-        profile_title : "Sungwon Moon",
-        profile_description :  <>Deep Learning Researcher for <a style={{color:'#d4352c', textDecoration:'underline'}} href="https://www.lomin.ai/">Lomin</a>.<br/>
-        I am very interested in solving the world’s problems<br/>
-        with <b>HIGH-LEVEL technology, such as DL!</b></>
+        profile_title : <FormattedMessage id="aboutProfileName"/>,
+        profile_description :  <><FormattedMessage id="aboutProfileDescription1" values={{department: <a style={{color:'#d4352c', textDecoration:'underline'}} href="https://www.lomin.ai/">Lomin</a>}}/><br/>
+        <FormattedMessage id="aboutProfileDescription2" values={{bold: <b>HIGH-LEVEL technology, such as DL!</b>}}/></>
     }
 
     return (
@@ -61,10 +61,10 @@ const About = props => {
                     <CustomWaypoint elemId="about-waypoint-9">
                         <Col xs={24} sm={24} md={24} lg={12} className="trigger" trigger="slide-in-left" id="about-waypoint-9">
                             <img className="about-profile-img" src={profile.profile_imgSrc} />
-                            <div className="about-profile-text kopubbatang">
+                            <div className="about-profile-text">
                                 {profile.profile_title}
                             </div>
-                            <div>
+                            <div className="about-profile-description">
                                 {profile.profile_description}
                             </div>
                         </Col>
