@@ -17,7 +17,7 @@ const WorksModal = ({modalOpen, onCancel, modalTitle, modalSubTitle, modalImgSrc
             onCancel();
         }}>
             <div className="modal-title-img-container">
-                <img width="auto" height="auto" src={modalImgSrc[modalImgInd]} className="modal-title-img"/>
+                <img src={modalImgSrc[modalImgInd]} className="modal-title-img"/>
                 {modalImgInd !== 0 && <LeftOutlined className="modal-title-icon left" onClick={() => {
                     setModalImgInd(modalImgInd - 1)
                 }}/>}
