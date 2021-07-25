@@ -118,3 +118,11 @@
         padding: 6px 20px;
     }
 }
+
+.locale-button {
+    float: right;
+    display: inline;
+    font-size: initial;
+    color: white;
+    cursor: pointer;
+}

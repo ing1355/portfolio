@@ -3,26 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { IntlProvider } from 'react-intl';
-import en from "./locale/en";
-import ko from "./locale/ko";
-
-const defaultLang = localStorage.getItem("lang") || "ko";
-
-let message;
-
-if (defaultLang === "ko") {
-  message = ko
-} else {
-  message = en
-}
-
 
 ReactDOM.render(
   <React.StrictMode>
-    <IntlProvider locale={defaultLang} messages={message}>
       <App />
-    </IntlProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

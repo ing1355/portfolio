@@ -25,7 +25,7 @@ const About = props => {
         profile_imgSrc : profileImg,
         profile_title : <FormattedMessage id="aboutProfileName"/>,
         profile_description :  <><FormattedMessage id="aboutProfileDescription1" values={{department: <a style={{color:'#d4352c', textDecoration:'underline'}} href="https://www.lomin.ai/">Lomin</a>}}/><br/>
-        <FormattedMessage id="aboutProfileDescription2" values={{bold: <b>HIGH-LEVEL technology, such as DL!</b>}}/></>
+        <FormattedMessage id="aboutProfileDescription2" values={{bold: <b><FormattedMessage id="aboutProfileBoldText"/></b>}}/></>
     }
 
     return (

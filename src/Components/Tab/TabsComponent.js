@@ -3,9 +3,17 @@ import '../../css/TabsComponent.css'
 import {MenuOutlined} from '@ant-design/icons';
 import $ from 'jquery'
 
-const TabsComponent = props => {
+const TabsComponent = ({lang, setLang}) => {
     const scrollRef = useRef(null);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [langText, setLangText] = useState(null);
+
+    useEffect(() => {
+        if(localStorage.getItem('lang')) {
+            setLangText(localStorage.getItem('lang').toUpperCase());
+        }
+    },[localStorage])
+
     useEffect(() => {
         window.onscroll = e => {
             if (scrollRef.current === 1) {
@@ -62,6 +70,13 @@ const TabsComponent = props => {
                 </div>
                 <div className="tabs-menu-item" onClick={() => { tabClick('contact') }} dest='contact'>
                     CONTACT
+                </div>
+                <div className="locale-button" onClick={() => {
+                    localStorage.setItem('lang', langText ? (langText === 'KO' ? 'en' : 'ko') : 'en')
+                    setLang(langText ? (langText === 'KO' ? 'en' : 'ko') : 'en')
+                    setLangText(langText ? (langText === 'KO' ? 'EN' : 'KO') : 'EN');
+                }}>
+                    {langText ? langText : 'KO'}
                 </div>
             </div>
             <div className={"mobile-menu-icon flex"}>

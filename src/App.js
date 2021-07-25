@@ -5,10 +5,22 @@ import TabsComponent from './Components/Tab/TabsComponent';
 import MainComponent from './Components/MainComponent';
 import Home from './Components/Home/Home';
 import 'antd/dist/antd.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import $ from 'jquery';
 
+import { IntlProvider } from 'react-intl';
+import en from "./locale/en";
+import ko from "./locale/ko";
+
 function App() {
+  const [lang, setLang] = useState(localStorage.getItem('lang'));
+
+  useEffect(() => {
+    if(!localStorage.getItem('lang')) {
+      localStorage.setItem('lang', 'ko');
+    }
+  },[])
+
   function highlightLink(anchor) {
     document.getElementsByClassName('')
     $('nav .active').removeClass('active');
@@ -46,11 +58,11 @@ function App() {
     })
   }, [])
   return (
-    <>
+    <IntlProvider locale={lang ? lang : 'ko'} messages={lang === 'ko' ? ko : en}>
       <Home />
-      <TabsComponent />
+      <TabsComponent lang={lang} setLang={setLang}/>
       <MainComponent />
-    </>
+    </IntlProvider>
   );
 }
 

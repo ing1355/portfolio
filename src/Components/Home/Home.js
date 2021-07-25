@@ -27,7 +27,6 @@ const Home = props => {
     return (
         <section id='home' className="flex">
             <Waypoint onEnter={e => {
-                console.log(e);
                 animationEnableFunc();
             }} />
             <div className="bubbles">
