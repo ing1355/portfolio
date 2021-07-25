@@ -22,8 +22,6 @@ import FlipperzImg1 from '../../assets/Flipperz/1.jpg'
 import mixitup from 'mixitup'
 import { FormattedMessage, useIntl } from 'react-intl';
 
-var mixer;
-
 const Works = props => {
     const {formatMessage} = useIntl();
     const tabs = ['ALL', 'VISION', 'NLP', 'NON-DL'];
@@ -96,24 +94,29 @@ const Works = props => {
                 });
             }
             if (!isAnimation) {
-                elem.addClass('trigger').addClass('animated').addClass(animationClass);
+                elem.addClass('animated').addClass(animationClass);
                 setTimeout(() => {
                     elem.removeClass('trigger').removeClass('animated').removeClass(animationClass)
-                    mixer = mixitup($('#test-row'), {
-                        selectors: {
-                            target: '.mix'
-                        },
-                        animation: {
-                            duration: 300
-                        }
-                    })
-                }, 2000);
+                    elem.css({
+                        '-webkit-animation-delay': '0s',
+                        '-moz-animation-delay': '0s',
+                        'animation-delay': '0s'
+                    });
+                }, (animationDelay.slice(0,-1) * 1000) + 750);
             }
         })
         setIsAnimation(true);
     }
 
     useEffect(() => {
+        mixitup($('#test-row'), {
+            selectors: {
+                target: '.mix'
+            },
+            animation: {
+                duration: 300
+            }
+        })
     }, [])
 
     return (

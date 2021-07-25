@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     $(window).on('scroll', () => {
       var pos = $(window).scrollTop();
-      var pos2 = pos + 50;
+      var pos2 = pos + 100;
       // Link Highlighting
       if (pos2 > $('#home').offset().top) {
         highlightLink('home');
