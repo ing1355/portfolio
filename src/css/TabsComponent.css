@@ -11,6 +11,23 @@
     border-bottom: 4px solid #d4352c;
 }
 
+.locale-button {
+    float: right;
+    display: inline;
+    font-size: initial;
+    color: white;
+    cursor: pointer;
+}
+
+.locale-button-mobile {
+    position: absolute;
+    left: 20px;
+    display: none;
+    font-size: initial;
+    color: white;
+    cursor: pointer;
+}
+
 .tabs-container.fixed {
     position: fixed;
     left: 0;
@@ -84,6 +101,14 @@
         display: flex;
     }
 
+    .locale-button {
+        display: none;
+    }
+
+    .locale-button-mobile {
+        display: inline;
+    }
+
     .tabs-sub-container {
         height: 0px;
         top: 50px;
@@ -117,12 +142,4 @@
         cursor: pointer;
         padding: 6px 20px;
     }
-}
-
-.locale-button {
-    float: right;
-    display: inline;
-    font-size: initial;
-    color: white;
-    cursor: pointer;
 }

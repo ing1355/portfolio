@@ -114,31 +114,6 @@ const Works = props => {
     }
 
     useEffect(() => {
-        if (currentTab) {
-            if (currentTab !== 'ALL') {
-                items.map((item, ind) => {
-                    var elem = $('#works-waypoint-' + (2 + ind)),
-                        animationClass = elem.attr('trigger');
-                    if (elem.hasClass('trigger')) {
-                        elem.removeClass('trigger').removeClass('animated').removeClass(animationClass)
-                        setTimeout(() => {
-                            mixer = mixitup($('#test-row'), {
-                                selectors: {
-                                    target: '.mix'
-                                },
-                                animation: {
-                                    duration: 300
-                                }
-                            })                            
-                        }, 1000);
-                    }
-                })
-            }
-        }
-    }, [currentTab])
-
-
-    useEffect(() => {
     }, [])
 
     return (
@@ -176,20 +151,6 @@ const Works = props => {
                                         document.getElementById(textId).style.top = '80px';
                                         document.getElementById(btnId).style.opacity = 1;
                                         document.getElementById(btnId).style.bottom = '50px';
-                                    }} onMouseDown={e => {
-                                        if (document.getElementById(imgId).style.opacity === '0') {
-                                            document.getElementById(imgId).style.opacity = 1;
-                                            document.getElementById(textId).style.opacity = 0;
-                                            document.getElementById(textId).style.top = 0;
-                                            document.getElementById(btnId).style.opacity = 0;
-                                            document.getElementById(btnId).style.bottom = 0;
-                                        } else {
-                                            document.getElementById(imgId).style.opacity = 0;
-                                            document.getElementById(textId).style.opacity = 1;
-                                            document.getElementById(textId).style.top = '80px';
-                                            document.getElementById(btnId).style.opacity = 1;
-                                            document.getElementById(btnId).style.bottom = '50px';
-                                        }
                                     }}
                                     onMouseLeave={e => {
                                         document.getElementById(imgId).style.opacity = 1;
