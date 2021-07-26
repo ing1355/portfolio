@@ -71,5 +71,7 @@
     "worksTitle5" : "FLIPPERZ",
     "worksContent5_1" : "·  An application that flips multiple images at once (iOS)",
     "worksContent5_2" : "·  Indirectly solves the problem that images(especially selfies) are stored in reverse when shooting with the iPhone front camera",
-    "worksContent5_3" : "·  Currently in Deactivate state due to expiration of Apple Developer contract"
+    "worksContent5_3" : "·  Currently in Deactivate state due to expiration of Apple Developer contract",
+    "ko" : "KO",
+    "en" : "EN"
 }

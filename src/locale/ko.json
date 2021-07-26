@@ -71,5 +71,7 @@
     "worksTitle5" : "FLIPPERZ",
     "worksContent5_1" : "· 저장된 여러 장의 이미지를 상하 / 좌우 반전하여 저장하는 어플리케이션 <FLIPPERZ> (iOS)",
     "worksContent5_2" : "· 아이폰 전방 카메라 촬영 시 이미지가 반전 저장되는 문제를 간접적으로 해결",
-    "worksContent5_3" : "· Downloads 28,000+ (현재 Apple Developer 계약 만기로 비활성 상태)"
+    "worksContent5_3" : "· Downloads 28,000+ (현재 Apple Developer 계약 만기로 비활성 상태)",
+    "ko" : "KO",
+    "en" : "EN"
 }
