@@ -80,6 +80,7 @@ const Blog = props => {
             </div>
             {(!loadedMore || loading) && <div className="btn-load-more" onClick={() => {
                 setLoading(true);
+                const temp_length = blogDatas.length;
                 const api = new GhostContentAPI({
                     url: 'https://sungwon.blog',
                     key: '134babcda16ad465f5f7ae624b',
@@ -92,6 +93,11 @@ const Blog = props => {
                         setLoading(false);
                         setLoadedMore(true);
                         setBlogDatas(posts);
+                        setTimeout(() => {
+                            posts.map((post,ind) => {
+                                if(ind >= blogDatas.length) AnimationActivate('blog-waypoint-' + ind)
+                            })
+                        }, 50);
                     })
                     .catch((err) => {
                         console.error(err);
