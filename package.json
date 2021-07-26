@@ -1,7 +1,7 @@
 {
-  "name": "portfolio2",
+  "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://ing1355.github.io/portfolio/",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
@@ -31,8 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cname": "echo sungwon.me > build/CNAME",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run cname",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

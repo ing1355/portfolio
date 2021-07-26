@@ -45,6 +45,9 @@
 
 .about-profile-description {
     margin: 0 auto;
+    font-family: KoPub Dotum;
+    font-size: 12pt;
+    letter-spacing: -0.02em;
 }
 
 .ability {
