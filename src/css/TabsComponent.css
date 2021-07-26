@@ -12,6 +12,7 @@
 }
 
 .locale-button {
+    font-family: Sometime;
     float: right;
     margin-right: 20px;
     display: inline;
