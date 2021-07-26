@@ -78,13 +78,13 @@
 
 .works-items-col-container {
     height: 300px;
+    width: 100%;
 }
 
 .works-items-card-container {
     width: 100%;
     height: 100%;
     display: inline-block;
-    transform: translate(0px, 0px);
 }
 
 .works-items-card-img {
