@@ -21,11 +21,12 @@
 }
 
 .locale-button-mobile {
+    font-family: Sometime;
     position: absolute;
     left: 20px;
     display: none;
     font-size: initial;
-    color: #179d2e;
+    color: white;
     cursor: pointer;
 }
 
