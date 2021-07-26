@@ -80,9 +80,10 @@ const Career = props => {
             title: <><FormattedMessage id="careerTitle5_1"/><br/><FormattedMessage id="careerTitle5_2"/></>,
             linkText: <><a href="https://www.msit.go.kr/index.do"><u><FormattedMessage id="careerDepartment5_1"/></u></a><FormattedMessage id="careerDepartment5_2"/></>,
             subscription: <><span><b><FormattedMessage id="careerDepartment5_3"/></b></span><br /><br />
-                <span><FormattedMessage id="careerDescription5"/></span><br />
-                <span><a href="http://biz.heraldcorp.com/view.php?ud=20191023000641">&lt;<FormattedMessage id="careerArticle"/> 1&gt;</a>&nbsp;
-                <a href={`https://www.edaily.co.kr/news/read?newsId=03650646622655872&mediaCodeNo=257`}>&lt;<FormattedMessage id="careerArticle"/> 2&gt;</a></span></>,
+                <span><FormattedMessage id="careerDescription5"/></span><br /><br />
+                <span><a href="http://sejong.korea.ac.kr/user/boardList.do?command=view&page=1&boardId=1480&boardSeq=114222&id=kr_060400000000">&lt;<FormattedMessage id="careerArticle"/> 1&gt;</a>&nbsp;
+                <a href={`https://www.edaily.co.kr/news/read?newsId=03650646622655872&mediaCodeNo=257`}>&lt;<FormattedMessage id="careerArticle"/> 2&gt;</a></span>
+                </>,
             term: <FormattedMessage id="careerDate5"/>,
             logo: beeaiLogo
         },

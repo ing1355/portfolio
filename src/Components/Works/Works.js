@@ -34,28 +34,31 @@ const Works = props => {
             title: <FormattedMessage id="worksTitle1" />,
             modalTitle: <FormattedMessage id="worksTitle1" />,
             modalSubTitle: '2021',
-            modalContent: <><p><FormattedMessage id="worksContent1_1" /></p>
-                <p><FormattedMessage id="worksContent1_2" /></p>
-                <p><FormattedMessage id="worksContent1_3" /></p></>,
+            modalContent: <><p><i><FormattedMessage id="worksContent1_1" /></i></p>
+                <p><i><FormattedMessage id="worksContent1_2" /></i></p>
+                <p><i><FormattedMessage id="worksContent1_3" /></i></p></>,
             modalImgSrc: [tableRecognizerImg0],
             type: ['VISION']
         }, {
             title: <FormattedMessage id="worksTitle2" />,
             modalTitle: <FormattedMessage id="worksTitle2" />,
             modalSubTitle: '2020',
-            modalContent: <><p><FormattedMessage id="worksContent2_1" /></p>
-                <p><FormattedMessage id="worksContent2_2" /></p>
-                <p><FormattedMessage id="worksContent2_3" /><br /><a href="https://library.korea.ac.kr/detail/?cid=CAT000046074034&ctype=t">&lt;<FormattedMessage id="worksContent2_4" />&gt;</a></p></>,
+            modalContent: <><p><i><FormattedMessage id="worksContent2_1" /></i></p>
+                <p><i><FormattedMessage id="worksContent2_2" /></i></p>
+                <p><i><FormattedMessage id="worksContent2_3" />
+                <br/>
+                <a href="https://library.korea.ac.kr/detail/?cid=CAT000046074034&ctype=t">&lt;<FormattedMessage id="worksContent2_4" />&gt;</a></i></p></>,
             modalImgSrc: [KoreanLicensePlateRecognitionImg0, KoreanLicensePlateRecognitionImg1, KoreanLicensePlateRecognitionImg2, KoreanLicensePlateRecognitionImg3],
             type: ['VISION']
         }, {
             title: <FormattedMessage id="worksTitle3" />,
             modalTitle: <FormattedMessage id="worksTitle3" />,
             modalSubTitle: '2020',
-            modalContent: <><p><FormattedMessage id="worksContent3_1" /></p>
-                <p><FormattedMessage id="worksContent3_2" /></p>
-                <p><FormattedMessage id="worksContent3_3" /></p>
-                <p><FormattedMessage id="worksContent3_4" /><a href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d1aa0d70-abfd-42e8-b448-ac43939eaf40/dubai_sign_language_translate_demo.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T095247Z&X-Amz-Expires=86400&X-Amz-Signature=cac00d6fca662f5220ee053783098196f23c6936b4132155eec76d953a69174f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22dubai_sign_language_translate_demo.mp4%22"><FormattedMessage id="worksContent3_5" /></a></p></>,
+            modalContent: <><p><i><FormattedMessage id="worksContent3_1" /></i></p>
+                <p><i><FormattedMessage id="worksContent3_2" /></i></p>
+                <p><i><FormattedMessage id="worksContent3_3" /></i></p>
+                <br/>
+                <p><i><FormattedMessage id="worksContent3_4" /><a href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d1aa0d70-abfd-42e8-b448-ac43939eaf40/dubai_sign_language_translate_demo.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T095247Z&X-Amz-Expires=86400&X-Amz-Signature=cac00d6fca662f5220ee053783098196f23c6936b4132155eec76d953a69174f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22dubai_sign_language_translate_demo.mp4%22"><FormattedMessage id="worksContent3_5" /></a></i></p></>,
             modalImgSrc: [DubaiSignLanguageTranslationSystemImg0, DubaiSignLanguageTranslationSystemImg1],
             type: ['VISION', 'NLP']
         },
@@ -63,19 +66,20 @@ const Works = props => {
             title: <FormattedMessage id="worksTitle4" />,
             modalTitle: <FormattedMessage id="worksTitle4" />,
             modalSubTitle: '2019',
-            modalContent: <><p><FormattedMessage id="worksContent4_1" /></p>
-                <p><FormattedMessage id="worksContent4_2" values={{ url: <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose"><u>Openpose</u></a> }} /></p>
-                <p><FormattedMessage id="worksContent4_3" /></p>
-                <p><FormattedMessage id="worksContent4_4" /><a href="https://www.msit.go.kr/index.do"><u><FormattedMessage id="worksContent4_5" /></u></a><FormattedMessage id="worksContent4_6" /></p></>,
+            modalContent: <><p><i><FormattedMessage id="worksContent4_1" /></i></p>
+                <p><i><FormattedMessage id="worksContent4_2" values={{ url: <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose"><u>Openpose</u></a> }} /></i></p>
+                <p><i><FormattedMessage id="worksContent4_3" /></i></p>
+                <br/>
+                <p><i><FormattedMessage id="worksContent4_4" /><a href="https://www.msit.go.kr/index.do"><u><FormattedMessage id="worksContent4_5" /></u></a><FormattedMessage id="worksContent4_6" /></i></p></>,
             modalImgSrc: [KoreanSignLanguageTranslationSystemImg0, KoreanSignLanguageTranslationSystemImg1, KoreanSignLanguageTranslationSystemImg2, KoreanSignLanguageTranslationSystemImg3],
             type: ['VISION', 'NLP']
         }, {
             title: <FormattedMessage id="worksTitle5" />,
             modalTitle: <FormattedMessage id="worksTitle5" />,
             modalSubTitle: '2017',
-            modalContent: <><p><FormattedMessage id="worksContent5_1" /></p>
-                <p><FormattedMessage id="worksContent5_2" /></p>
-                <p><FormattedMessage id="worksContent5_3" /></p></>,
+            modalContent: <><p><i><FormattedMessage id="worksContent5_1" /></i></p>
+                <p><i><FormattedMessage id="worksContent5_2" /></i></p>
+                <p><i><FormattedMessage id="worksContent5_3" /></i></p></>,
             modalImgSrc: [FlipperzImg0, FlipperzImg1],
             type: ['NON-DL']
         }
@@ -165,7 +169,7 @@ const Works = props => {
                                         }}>
                                         <div className="works-items-card-img" id={imgId} style={{ background: `url(${modalImgSrc[0]}) center center/cover` }} />
                                         <div className="works-items-card-text" id={textId}>
-                                            <div style={{ fontSize: '16pt' }}>
+                                            <div style={{ fontSize: '16pt', margin: '5px'}}>
                                                 {title}
                                             </div>
                                             <span style={{ color: '#d3452c' }}>
@@ -175,7 +179,7 @@ const Works = props => {
                                         <button className="works-items-card-btn" id={btnId} onClick={() => {
                                             setModalOpen(ind);
                                         }}>
-                                            LEARN MORE
+                                            <FormattedMessage id="worksLearnMore" />
                                         </button>
                                     </div>
                                 </div>
