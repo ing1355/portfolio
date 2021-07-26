@@ -1,7 +1,7 @@
 {
     "aboutProfileName" : "문 성 원",
     "aboutProfileDescription1" : "{department}에서 CV 연구원으로 일하고 있습니다.",
-    "aboutProfileDescription2" : "{bold}로 풀어내는 데에 흥미가 있습니다, 특히나 딥러닝을 활용한다면요!",
+    "aboutProfileDescription2" : "저는 {bold}로 풀어내는 데에 흥미가 있습니다!",
     "aboutProfileBoldText" : "현실에 존재하는 문제를 기술",
     "aboutProfileTag1" : "Natural Language Processing",
     "aboutProfileTag2" : "Computer Vision",
