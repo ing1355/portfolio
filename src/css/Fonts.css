@@ -32,3 +32,10 @@
     font-weight: bold;
     src: url('../assets//fonts/KoPubDotumBold.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: Sometime;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../assets//fonts/210Sometime.ttf') format('truetype');
+}

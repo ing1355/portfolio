@@ -30,9 +30,9 @@ const WorksModal = ({modalOpen, onCancel, modalTitle, modalSubTitle, modalImgSrc
                 {modalTitle}
             </div>
             <div className="modal-subtitle-container">
-                {modalSubTitle}
+                {modalSubTitle}<br/>
             </div>
-            <hr/>
+            <hr/><br/>
             <div className="modal-content-container">
                 {modalContent}
             </div>

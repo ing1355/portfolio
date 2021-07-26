@@ -12,7 +12,9 @@
 }
 
 .locale-button {
+    font-family: Sometime;
     float: right;
+    margin-right: 20px;
     display: inline;
     font-size: initial;
     color: white;
@@ -20,6 +22,7 @@
 }
 
 .locale-button-mobile {
+    font-family: Sometime;
     position: absolute;
     left: 20px;
     display: none;

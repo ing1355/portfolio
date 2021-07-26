@@ -66,7 +66,7 @@
 }
 
 .works-item-container {
-    width: 100%;
+    width: 90%;
     margin: 20px 0;
 }
 
@@ -96,8 +96,9 @@
 .works-items-card-text {
     position: absolute;
     left: 0;
-    top: 0;
-    width: 100%;
+    right: 0;
+    width: 230px;
+    margin: 0 auto;
     z-index: 2;
     transition: all 0.3s ease-in-out;
     text-align: center;
@@ -151,11 +152,12 @@
 
 .modal-subtitle-container {
     color: gray;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 .modal-content-container {
-
+    font-size: 12.3pt;
+    word-spacing: -1px;
 }
 
 .modal-body-container {
@@ -175,18 +177,19 @@
 }
 
 .ant-modal-body {
-    padding: 16px 0 0 0 !important;
+    padding: 25px 10px 0px 10px !important;
 }
 
 .modal-title-img-container {
     position: relative;
-    min-height: 300px;
+    min-height: 400px;
 }
 
 .modal-title-img {
     max-width: 100%;
     max-height: 100%;
     position: absolute;
+    padding: 0px 0px 20px 0px;
     top: 0;
     left: 50%;
     z-index: 1;
